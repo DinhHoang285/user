@@ -1,0 +1,41 @@
+.container {
+  width: 100%;
+
+  .box-button-type {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 8px;
+
+    .button {
+      color: #f5ffed;
+      background-color: transparent;
+      width: 125px;
+      height: 40px;
+      border-radius: 23px;
+      border: 1px solid #42B1E8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      i {
+        font-size: 16px;
+        font: normal normal normal 20px/19px PMingLiU-ExtB;
+      }
+    }
+
+    .active {
+      background: var(--ocean-blue) 0% 0% no-repeat padding-box;
+    }
+
+    .disable {
+      cursor: not-allowed;
+    }
+  }
+}

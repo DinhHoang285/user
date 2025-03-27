@@ -1,0 +1,128 @@
+.profile-drawer {
+  :global {
+    .ant-drawer-content-wrapper {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      box-shadow: -6px 0 16px 0 rgba(0, 0, 0, 0.08), -3px 0 6px -4px rgba(0, 0, 0, 0.12), -9px 0 28px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .ant-drawer-header {
+      padding: 10px 15px;
+      background-color: var(--navi-blue);
+      border-bottom: 1px solid var(--aqua-blue);
+    }
+
+    .ant-drawer-body {
+      padding: 10px 15px 60px;
+      background-color: var(--navi-blue);
+
+      .ant-divider {
+        border-bottom: 1px solid var(--aqua-blue);
+      }
+    }
+  }
+
+  :global .ant-drawer-close {
+    z-index: 1;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .profile-menu-item {
+    .menu-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 5px;
+      margin-bottom: 2px;
+      cursor: pointer;
+      font-size: 15px;
+      color: var(--white);
+      gap: 8px;
+
+      :global .anticon {
+        font-size: 18px;
+        width: 24px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      &.active,
+      &:hover {
+        background-color: var(--primary);
+        border-radius: 5px;
+        color: #fff;
+
+        :global .anticon {
+          color: #fff;
+        }
+      }
+    }
+
+    .ant-divider {
+      margin: 10px 0;
+    }
+  }
+}
+
+
+.profile-user {
+  display: flex;
+  color: var(--white);
+  gap: 5px;
+  align-items: center;
+
+  .profile-name {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-transform: capitalize;
+    font-size: 13px;
+    color: var(--white);
+
+    .sub-name {
+      font-size: 11px;
+      text-transform: none;
+    }
+  }
+}
+
+.sub-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 12px;
+
+  >a {
+    color: var(--gray);
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+
+    span {
+      align-items: center;
+      display: flex;
+      gap: 4px;
+    }
+  }
+}
+
+[data-theme='dark'] .profile-drawer {
+  color: var(--black);
+  background-color: var(--light-blue);
+
+  .sub-info {
+    a {
+      color: var(--black);
+    }
+  }
+}

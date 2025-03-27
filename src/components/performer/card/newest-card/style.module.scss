@@ -1,0 +1,31 @@
+.card {
+  &-wrapper {
+    display: block;
+    width: 100%;
+
+    @media (max-width: 550px) {
+      position: relative;
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 166px;
+    }
+  }
+
+  &-thumb {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+
+    @media (max-width: 550px) {
+      height: 166px;
+    }
+  }
+
+  &-name {
+    margin: 8px 0;
+    font-size: 16px;
+    text-align: center;
+    color: var(--white);
+  }
+}

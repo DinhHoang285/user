@@ -1,0 +1,56 @@
+.feed-polls {
+
+  :global {
+    .p-quest {
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      color: #000000;
+    }
+
+    .p-item {
+      display: flex;
+      background-color: var(--light-blue);
+      color: var(--primary);
+      padding: 8.5px;
+      border-radius: 4px;
+      justify-content: space-between;
+      cursor: pointer;
+      margin: 3px 0;
+      position: relative;
+      overflow: hidden;
+      font-weight: 600;
+
+      .progress-bar {
+        position: absolute;
+        background-color: var(--primary-light);
+        opacity: 0.5;
+        height: 100%;
+        width: 100%;
+        max-width: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      .p-desc {
+        &::first-letter {
+          text-transform: capitalize;
+        }
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    .total-vote {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: var(--darkgray);
+    }
+  }
+
+}

@@ -1,0 +1,29 @@
+.social-share-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  [class~='react-share__ShareButton'] {
+    margin: 0 5px;
+  }
+
+}
+
+.btn {
+  border: 1px solid var(--light-grey);
+  color: var(--primary);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+
+  svg {
+    color: var(--neon-blue);
+    font-size: 25px;
+  }
+}

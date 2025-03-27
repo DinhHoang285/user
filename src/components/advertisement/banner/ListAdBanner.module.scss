@@ -1,0 +1,66 @@
+.banner {
+  &-wrapper {
+    margin: 32px 0;
+  }
+
+  &-header {
+    padding-bottom: 8px;
+    font-size: 16px;
+    border-bottom: 1px solid #42b1e8;
+  }
+
+  &-main {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+}
+
+.item {
+  &-wrapper {
+    position: relative;
+    display: block;
+    height: 180px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  &-tag {
+    position: absolute;
+    z-index: 1;
+    right: 5px;
+    top: 0;
+    padding: 4px 12px;
+    color: var(--white);
+    background-color: var(--blood-red);
+    border-radius: 5px;
+  }
+
+  &-name {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    width: 100%;
+    font-size: 13px;
+    color: var(--white);
+    background-color: var(--royal-blue);
+    padding: 0 8px;
+  }
+}

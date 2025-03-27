@@ -1,0 +1,106 @@
+.f-upload-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+
+  .f-upload-item {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 45%;
+    border-radius: 10px;
+
+    .f-remove {
+      position: absolute;
+      right: 5px;
+      top: 5px
+    }
+
+    .f-upload-thumb {
+      height: 150px;
+      width: 100%;
+      border-radius: 4px;
+      overflow: hidden;
+
+      svg {
+        color: var(--white);
+        transform: scale(2);
+        object-fit: cover;
+      }
+
+      .ant-image {
+        height: 100%;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .f-thumb-vid {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--white);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--light-grey);
+        }
+
+        .anticon {
+          color: var(--primary-light);
+          font-size: 22px;
+        }
+      }
+    }
+
+    .f-upload-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 100%;
+      color: var(--white)
+    }
+
+    .f-upload-size {
+      font-size: 8px;
+      color: var(--silver-gray)
+    }
+  }
+
+  .add-more {
+    display: flex;
+    width: 120px;
+    height: 180px;
+    align-self: center;
+    justify-content: center;
+    background-color: var(--light-grey);
+    border-radius: 5px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    cursor: pointer;
+
+    .open-modal {
+      height: 100%;
+      width: 100%;
+      background-color: var(--light-grey);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+  }
+}

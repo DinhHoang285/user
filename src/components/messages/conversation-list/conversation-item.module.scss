@@ -1,0 +1,135 @@
+.c-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: relative;
+
+  &:hover,
+  &.active {
+    background: rgba($color: #0554a5, $alpha: 0.12);
+    cursor: pointer;
+  }
+
+  :global {
+    .online-status {
+      position: absolute;
+      left: 30px;
+      bottom: 2px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: var(--grey);
+      border: 2px solid var(--white);
+
+      &.active {
+        background-color: var(--green);
+      }
+    }
+
+    .ant-checkbox-wrapper {
+      margin-right: 10px;
+
+      .ant-checkbox-input {
+        .ant-checkbox-inner {
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .c-left-corner {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .c-left-corner span {
+      font-size: 10px;
+    }
+
+    .c-photo {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 50%;
+    }
+
+    .c-info {
+      width: 100%;
+
+      .flex-name-profile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 3px;
+        color: var(--black);
+
+        .m-user-name {
+          cursor: pointer;
+          text-transform: capitalize;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          max-width: 250px;
+          display: inline-flex;
+          align-items: center;
+          gap: 3px;
+          color: var(--pink);
+          font-weight: 500;
+
+          @media only screen and (max-width: 767px) {
+            max-width: 125px;
+          }
+        }
+
+        .c-time {
+          color: var(--grey);
+          font-size: 12px;
+          padding-left: 15px;
+          text-transform: lowercase;
+        }
+      }
+
+      .c-snippet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        .txt {
+          max-width: 90px;
+          font-size: 12px;
+          margin: 0;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          padding-right: 15px;
+          color: var(--grey);
+
+          @media only screen and (max-width: 550px) {
+            max-width: 230px;
+          }
+        }
+
+        .badge-notify {
+          height: 6px;
+          width: 6px;
+          border-radius: 100%;
+          background: var(--red);
+        }
+      }
+    }
+
+    .check-center {
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

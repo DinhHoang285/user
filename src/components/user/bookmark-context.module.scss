@@ -1,0 +1,203 @@
+.content {
+  .bookmark-heading {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1080px;
+    border-bottom: 1px solid #6ecddf;
+    background-color: var(--navi-black);
+    box-sizing: border-box;
+    z-index: 9;
+    flex-wrap: nowrap;
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      h3 {
+        color: var(--white);
+        font-size: 16px;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+
+      .actions-btn {
+        &-list {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        &-grid {
+          cursor: pointer;
+          margin-right: 12px;
+
+          svg {
+            font-size: 22px;
+          }
+        }
+
+        &-search {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          justify-content: center;
+
+          [class~='ant-input-affix-wrapper'] {
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+            border: none;
+            padding: 0;
+            outline: none;
+            box-shadow: none;
+            background: none;
+            color: var(--white) !important;
+            transition: all ease-in-out 0.5s;
+
+            &.active {
+              width: 240px;
+              opacity: 1;
+              visibility: visible;
+              bottom: 1px;
+            }
+
+            [class~='ant-input-prefix'] {
+              font-size: 22px;
+            }
+
+            input {
+              height: 30px;
+
+              &::placeholder {
+                color: var(--silver-gray);
+              }
+            }
+          }
+
+          .open-search {
+            color: var(--white);
+
+            [class~='anticon'] {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .search-bar-feed {
+      width: 35%;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+
+      [class~='ant-input-affix-wrapper'] {
+        border: none;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+        background: none;
+        color: var(--white);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out;
+
+        &.active {
+          opacity: 1;
+          visibility: visible;
+          bottom: 1px;
+        }
+
+        [class~='ant-input-prefix'] {
+          font-size: 25px;
+          margin-right: 10px;
+        }
+
+        input {
+          height: 30px;
+        }
+      }
+
+      .open-search {
+        color: var(--white);
+
+        [class~='anticon'] {
+          font-size: 20px;
+        }
+      }
+
+      .button-play {
+        margin-right: 12px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      max-width: 720px;
+
+      .search-bar-feed {
+        right: 10px;
+        position: absolute;
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .search-bar-feed {
+        right: 16px;
+        position: absolute;
+        width: 70%;
+      }
+    }
+  }
+
+  .bookmark-header-bottom {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: nowrap;
+
+    @media (max-width: 550px) {
+      width: 90vw;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .bookmark-btn {
+      width: 80px;
+      height: 50px;
+      border-radius: 10px;
+      color: var(--white);
+      background-color: transparent;
+      border: 1px solid var(--royal-blue);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+        color: var(--white);
+        background-color: var(--royal-blue);
+      }
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--royal-blue);
+      }
+    }
+  }
+}

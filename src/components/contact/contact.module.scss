@@ -1,0 +1,49 @@
+.contact-box {
+  :global {
+    .contact-form {
+      max-width: 500px;
+      margin: auto;
+
+      .form-button {
+        width: 100%;
+        background-image: linear-gradient(0deg, var(--primary), var(--primary-light));
+        border-color: var(--primary-light);
+        color: #fff;
+        height: 48px;
+        border-radius: 50px;
+        font-size: 16px;
+        margin-bottom: 20px;
+      }
+
+      .ant-form-item {
+
+        .ant-form-item-control {
+          padding: 7px 0;
+        }
+
+        input,
+        textarea {
+          border-radius: 20px;
+          padding: 0 20px;
+        }
+
+        .ant-input-password {
+          border-radius: 25px;
+          padding: 0 20px;
+
+          input {
+            border-radius: 25px;
+            padding: 0 9px;
+            border: none;
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 550px) {
+    padding: 0;
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.container {
+  width: 100%;
+
+  table {
+    width: 100%;
+  }
+
+  :global {
+    .ant-table-thead {
+
+      .ant-table-cell {
+        text-align: left;
+        color: var(--white) !important;
+
+        .ant-table-column-sorters {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      .ant-empty {
+        text-align: center;
+      }
+
+      .ant-table-cell {
+        color: var(--white);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.account-form {
+  :global {
+    .ant-form-item {
+      .ant-select {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        background-color: transparent;
+        color: var(--white);
+        border: 1px solid var(--aqua-blue);
+        box-shadow: 0 0 3px var(--soft-pink);
+        border-radius: 6px;
+        padding: 0 12px;
+
+        .ant-select-selector {
+          width: 100%;
+          background-color: transparent !important;
+          color: var(--white) !important;
+          border: none !important;
+          box-shadow: none !important;
+        }
+
+        .ant-select-arrow {
+          .anticon {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

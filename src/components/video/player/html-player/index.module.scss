@@ -1,0 +1,174 @@
+.vid-ctn {
+  max-width: 100%;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  video {
+    background-color: #000;
+    display: flex;
+    border-radius: 12px; // need style parent too
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(21, 10, 60, 1);
+
+    &::-webkit-media-controls {
+      display: none !important;
+      opacity: 0;
+    }
+
+    &::-webkit-media-controls-start-playback-button {
+      display: none !important;
+    }
+  }
+
+  :global {
+    .vid-poster {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      z-index: 1;
+
+      img {
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      svg {
+        height: 60px;
+        width: auto;
+        color: #fff;
+        z-index: 1;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  :global {
+    .controls {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 10px 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      color: #fff;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      color: #fff;
+      padding: 0;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .video-timer {
+      color: #a2a2a2;
+      font-size: 12px;
+    }
+
+    .separator {
+      margin: 0 5px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+
+      svg {
+        height: 22px;
+        width: 22px;
+      }
+    }
+
+    .volume-container {
+      position: relative;
+
+      .volume {
+        position: absolute;
+        bottom: 220%;
+        left: -38px;
+        opacity: 0;
+        width: 80px;
+        transform: rotate(90deg);
+        padding: 4px 10px;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+
+        input {
+          transform: rotate(180deg);
+          cursor: pointer;
+          position: relative;
+          padding: 0;
+          left: unset;
+          bottom: unset;
+        }
+
+        input[type='range'] {
+          overflow: hidden;
+          -webkit-appearance: none;
+          background-color: var(--gray);
+        }
+
+        input[type='range']::-webkit-slider-thumb {
+          width: 12px;
+          -webkit-appearance: none;
+          height: 12px;
+          background-color: var(--primary);
+          border-radius: 50%;
+          box-shadow: -80px 0 0 80px var(--lightPrimary);
+        }
+      }
+
+      &:hover,
+      &:active {
+        .volume {
+          opacity: 1;
+          z-index: 1;
+        }
+      }
+    }
+
+    .playback-line {
+      height: 4px;
+      background-color: var(--gray);
+      width: 70%;
+      cursor: pointer;
+    }
+
+    .progress-bar {
+      height: 100%;
+      width: 0;
+      background-color: var(--primary);
+      transition: width 0.1s linear;
+    }
+  }
+
+  &:hover,
+  &:active {
+    :global {
+      .controls {
+        opacity: 1;
+      }
+    }
+  }
+}

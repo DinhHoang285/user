@@ -1,0 +1,17 @@
+.subscription-form {
+  :global {
+    .ant-form-item .ant-form-item-explain {
+      text-align: left;
+    }
+
+    .ant-switch-checked {
+      background: #1677ff !important;
+
+    }
+
+    .ant-switch-inner {
+      border: 1px solid var(--aqua-blue);
+      box-shadow: 0 0 3px var(--soft-pink);
+    }
+  }
+}

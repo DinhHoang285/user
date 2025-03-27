@@ -1,0 +1,60 @@
+.newest-listing {
+  margin: 16px 0;
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &-mark {
+        width: 16px;
+        height: 43px;
+        background-color: #f229e6;
+        border-radius: 8px;
+      }
+
+      &-title {
+        font-size: 19.16px;
+      }
+    }
+
+    .header-all {
+      color: var(--white) !important;
+    }
+  }
+
+  &-main {
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+
+    @media (max-width: 550px) {
+      overflow-y: auto;
+      display: flex;
+      flex-wrap: nowrap;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+        /* Adjust the height of the scrollbar */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: transparent;
+      }
+    }
+  }
+}

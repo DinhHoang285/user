@@ -1,0 +1,56 @@
+.action-btn {
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: var(--white);
+
+  &>div {
+    display: flex;
+    align-items: center;
+  }
+
+  :global .anticon {
+    font-size: 20px;
+  }
+
+  &.active,
+  &.hover {
+    color: var(--primary);
+  }
+
+  &.inContentView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+
+    svg {
+      font-size: 25px;
+    }
+  }
+
+  svg {
+    font-size: 25px;
+  }
+}
+
+.btn-like-reel {
+  border: none !important;
+  height: 32px;
+  width: 32px;
+  padding: 5px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    color: var(--white);
+  }
+}

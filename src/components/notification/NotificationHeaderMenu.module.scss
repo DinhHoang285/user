@@ -1,0 +1,216 @@
+.notification-wrapper {
+  .btn-dismiss-all {
+    position: absolute;
+    // margin-top: 1.1in;
+    right: 35.5%;
+    z-index: 99;
+    font-size: 13px !important;
+    transform: translate(60%, 25%);
+  }
+
+  :global {
+    .ant-list {
+      color: var(--white);
+    }
+  }
+}
+
+.notification-menu {
+  width: 350px;
+  max-height: calc(75vh);
+  overflow-y: scroll;
+  background-color: var(--light-black) !important;
+  box-shadow: 0 5px 10px rgba(50, 50, 50, 0.2) !important;
+
+  :global {
+    .ant-dropdown-menu-item-group-title {
+      span {
+        color: var(--white);
+      }
+    }
+
+    .ant-dropdown-menu-item-group-list {
+      margin-top: 8px !important;
+    }
+
+    .ant-menu-title-content {
+      color: var(--white) !important;
+    }
+
+    .ant-menu-item-group-title a {
+      float: right;
+    }
+
+    .ant-menu-item {
+      height: 75px;
+      overflow: hidden;
+      border-bottom: 0.5px solid #ccc;
+
+      .ant-card-meta-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .ant-menu-item:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .header {
+    box-sizing: border-box;
+    margin-bottom: 8px;
+  }
+
+  .notification-unread {
+    background-color: #09162E;
+    color: var(--white) !important;
+    margin-top: 12px !important;
+
+    .notification-item {
+      width: 100%;
+      padding: 5px;
+      display: flex;
+      position: relative;
+
+      .notification-item-list {
+        line-height: 18px;
+
+        .message {
+          max-width: 250px;
+          white-space: normal;
+          line-height: 20px;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          -moz-line-clamp: 2;
+          -moz-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
+
+        .time {
+          line-height: 20px;
+        }
+      }
+
+      .notification-docw {
+        height: 100%;
+        display: flex;
+        width: 14px;
+        border-radius: 50%;
+
+        svg {
+          fill: var(--royal-blue)
+        }
+      }
+    }
+  }
+
+  .notification-read {
+    color: var(--white);
+    box-sizing: border-box;
+    padding: 0 5px;
+
+    .notification-item {
+      width: 100%;
+      padding: 5px;
+      display: flex;
+    }
+  }
+
+
+  .btn-dismiss-read-all {
+    margin-left: 100px;
+    padding: 5px;
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: var(--white);
+
+    &:hover {
+      background: var(--secondary) !important;
+    }
+  }
+}
+
+.notification-page {
+  width: 5.7in;
+  max-height: calc(70dvh);
+  overflow-y: scroll;
+  background-color: transparent !important;
+  color: var(--white) !important;
+
+
+  .notification-unread {
+    background-color: #cecece0d !important;
+    color: var(--white) !important;
+    margin-bottom: 4px;
+
+    &:hover {
+      color: var(--white) !important;
+    }
+  }
+
+  .notification-read {
+    color: var(--white) !important;
+
+    &:hover {
+      color: var(--white) !important;
+    }
+
+    .message {
+      max-width: 250px;
+    }
+  }
+
+  .ant-menu-item-group-title a {
+    float: right;
+  }
+
+  :global {
+
+    .ant-menu-item {
+      height: 75px !important;
+      overflow: hidden;
+
+      .ant-card-meta-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .ant-menu-item:last-child {
+      border-bottom: none;
+    }
+
+    .notification-item {
+      padding: 5px;
+      display: flex;
+
+    }
+  }
+
+  .notification-item-list {
+    line-height: 18px;
+    margin-left: 8px;
+
+    .message {
+      max-width: 250px;
+      white-space: normal;
+      line-height: 20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      -moz-line-clamp: 2;
+      -moz-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+
+    .time {
+      line-height: 20px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.lb-pup {
+
+  &.popup-2-item,
+  &.popup-4-item {
+    :global .yarl__thumbnails_container {
+      .yarl__thumbnails_track {
+        .yarl__thumbnails_thumbnail {
+
+          &:first-child {
+            display: none;
+          }
+
+          // &:first-child,
+          // &:nth-child(2) {
+          //   opacity: 0;
+          //   pointer-events: none;
+          //   transition: 0.3s;
+          // }
+
+          // &.yarl__thumbnails_thumbnail_fadeout {
+          //   animation: none;
+
+          //   &:first-child,
+          //   &:last-child {
+          //     opacity: 0;
+          //     pointer-events: none;
+          //   }
+          // }
+
+          // &.yarl__thumbnails_thumbnail_active {
+          //   opacity: 1;
+          //   pointer-events: inherit;
+          // }
+        }
+      }
+    }
+  }
+}

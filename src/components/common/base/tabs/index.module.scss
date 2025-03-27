@@ -1,0 +1,82 @@
+.tabs_rc {
+  :global {
+    .menu-nav {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .menu-item {
+      width: 100%;
+      font-size: 25px;
+      padding: 12px 25px;
+      cursor: pointer;
+      font-weight: 600;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      gap: 5px;
+
+      svg {
+        height: 24px;
+        width: auto;
+        color: var(--soft-pink);
+      }
+
+      .tab-name {
+        color: var(--primary);
+        font-size: 14px;
+        margin: 0 8px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .tab-amount {
+        font-size: 14px;
+        color: var(--soft-pink);
+      }
+
+      .tab-ink-bar {
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        background-color: transparent;
+        transition: background-color 0.3s ease-in;
+      }
+
+      &.active {
+        .tab-ink-bar {
+          background-color: var(--pink);
+        }
+
+        svg,
+        .tab-amount {
+          color: var(--pink);
+        }
+
+        .tab-name {
+          color: var(--black);
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        gap: 4px;
+        padding: 12px 10px;
+
+        .tab-name {
+          display: none;
+        }
+      }
+    }
+
+    .tab-content {
+      margin: 24px 0;
+    }
+  }
+}

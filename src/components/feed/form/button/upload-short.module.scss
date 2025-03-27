@@ -1,0 +1,121 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  .content {
+    width: 246px;
+    height: 438px;
+    border-radius: 9px;
+    border: 1px solid #42B1E8;
+    position: relative;
+
+    :global {
+      .ant-upload {
+        width: 100% !important;
+        height: 100% !important;
+      }
+    }
+
+    .box-upload {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: #FFFF;
+
+      i {
+        font-size: 30px;
+      }
+
+      p {
+        font-weight: bold;
+      }
+
+      span {
+        font-weight: 400;
+        color: #FFFFFF;
+      }
+
+    }
+
+    .box-image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        cursor: pointer;
+        border-radius: 9px;
+      }
+
+      .box-play {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      .box-delete {
+        cursor: pointer;
+        background-color: #BA2025;
+        border: none;
+        width: 25px;
+        height: 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          color: #FFFF;
+        }
+      }
+    }
+  }
+
+  .box-preview {
+    width: 100%;
+
+    :global {
+      .ant-modal-body {}
+
+      .ant-modal-content {
+        max-height: 80dvh;
+        overflow: hidden;
+
+        .ant-modal-body {
+          width: 100%;
+          height: 100%;
+
+          .video-js {
+            width: 100%;
+            height: 100%;
+            padding-top: 500px;
+
+            video {
+              object-fit: contain;
+              padding: 0;
+              max-height: 80dvh;
+            }
+          }
+        }
+      }
+    }
+  }
+}

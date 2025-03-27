@@ -1,0 +1,99 @@
+.main-header {
+  border-bottom: 1px solid #a5a5a5;
+  background-color: var(--navi-black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+
+  // transition: opacity 0.5s ease-in-out, z-index 0.5s;
+
+  :global {
+    .h-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+    }
+
+    .logo {
+      padding: 3px 0;
+
+      img {
+        height: 47px;
+        width: auto;
+      }
+    }
+
+    .menu-items {
+      display: inline-flex;
+      align-items: center;
+
+      a {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: var(--black);
+        font-size: 22px;
+        padding: 5px 12px;
+        font-weight: 600;
+        position: relative;
+
+        svg {
+          height: 24px;
+          width: auto;
+        }
+
+
+        .ant-badge {
+          position: absolute;
+          top: 5px;
+          right: 0;
+
+          .ant-badge-count {
+            background-color: var(--primary);
+          }
+        }
+
+        &.active {
+          color: var(--primary);
+        }
+
+        &.avatar-nav {
+          img {
+            height: 28px;
+            width: 28px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        &.width-nav {
+          min-width: 146px;
+          font-size: 18px;
+
+          @media only screen and (max-width: 550px) {
+            min-width: 138px;
+            color: var(--primary);
+            font-size: 14px;
+          }
+        }
+
+        @media only screen and (max-width: 550px) {
+          padding: 16px 12px;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 550px) {
+    height: unset;
+
+    &.hide {
+      opacity: 0;
+      z-index: -1;
+    }
+  }
+}

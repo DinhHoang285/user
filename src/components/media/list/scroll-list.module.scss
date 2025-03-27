@@ -1,0 +1,12 @@
+.grid-view {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.fixed-scroll {
+  // max-width: 680px;
+  // margin: 10px auto;
+}

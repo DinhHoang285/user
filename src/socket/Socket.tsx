@@ -1,0 +1,114 @@
+'use client';
+
+import { authService } from '@services/auth.service';
+import {
+  ReactNode, useEffect, useMemo, useRef, useState
+} from 'react';
+import SocketIO from 'socket.io-client';
+
+import { useSession } from 'next-auth/react';
+import { SocketContext } from './SocketContext';
+
+type ISocketProps = {
+  children: ReactNode;
+}
+
+export default function Socket({
+  children
+}: ISocketProps) {
+  // support 1 connection right now only
+  const socket = useRef<any>(null);
+  const { data: session } = useSession();
+  const [socketState, setSocketState] = useState(null);
+  const [socketStatus, setSocketStatus] = useState('initialized');
+
+  const login = () => {
+    if (!socket) return;
+
+    const token = authService.getToken();
+    token && socket.current.emit('auth/login', { token });
+  };
+
+  const connectSocket = () => {
+    const token = authService.getToken();
+    const defaultOptions = {
+      reconnection: true,
+      reconnectionAttempts: Infinity,
+      reconnectionDelay: 1 * 1000,
+      reconnectionDelayMax: 10 * 1000,
+      autoConnect: true,
+      transports: ['websocket', 'polling', 'long-polling'],
+      rejectUnauthorized: true
+    };
+    const options = {
+      ...defaultOptions,
+      opts: {
+        query: token ? `token=${token || ''}` : ''
+      },
+      query: token ? `token=${token || ''}` : ''
+    } as any;
+
+    const socketUrl = process.env.API_ENDPOINT;
+    socket.current = SocketIO(socketUrl, options) as any;
+    setSocketState(socket.current);
+
+    socket.current.status = 'initialized';
+    setSocketStatus('initialized');
+
+    socket.current.on('connect', () => {
+      socket.current.status = 'connected';
+      setSocketStatus('connected');
+    });
+
+    socket.current.on('disconnect', () => {
+      socket.current.status = 'disconnected';
+      setSocketStatus('disconnect');
+    });
+
+    socket.current.on('error', () => {
+      socket.current.status = 'failed';
+      setSocketStatus('failed');
+    });
+
+    socket.current.on('reconnect', () => {
+      socket.current.status = 'connected';
+      login();
+      setSocketStatus('connected');
+    });
+
+    socket.current.on('reconnecting', () => {
+      socket.current.status = 'reconnecting';
+      setSocketStatus('reconnecting');
+    });
+
+    socket.current.on('reconnect_failed', () => {
+      socket.current.status = 'failed';
+      setSocketStatus('failed');
+    });
+  };
+
+  const getSocket = () => socket.current;
+
+  const connected = () => socketStatus === 'connected';
+
+  const socketValue = useMemo(() => ({
+    socket: socketState,
+    getSocket,
+    socketStatus,
+    connected
+  }), [socketState, socketStatus]);
+
+  useEffect(() => {
+    connectSocket();
+    // eslint-disable-next-line consistent-return
+    return () => {
+      if (socket.current?.readyState) socket.current.close();
+    };
+  }, [session]);
+
+  return (
+    <SocketContext.Provider value={socketValue}>
+      {children}
+    </SocketContext.Provider>
+  );
+}

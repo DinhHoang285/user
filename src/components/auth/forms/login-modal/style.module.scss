@@ -1,0 +1,47 @@
+.login-box {
+  overflow: hidden;
+
+  .content-right {
+    width: 100%;
+
+    .logo {
+      text-align: center;
+      height: 140px;
+      width: auto;
+
+      img {
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+      }
+    }
+
+    .title {
+      h3 {
+        margin-top: 30px;
+        font-size: 28px;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+
+    a {
+      font-weight: 600;
+      font-size: 11px;
+      color: var(--primary);
+    }
+
+    p a {
+      font-size: 12px;
+
+      &.sub-text {
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      padding: 0;
+      width: 100%;
+    }
+  }
+}

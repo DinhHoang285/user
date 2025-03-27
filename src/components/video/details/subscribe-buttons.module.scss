@@ -1,0 +1,16 @@
+.btn-primary {
+  background-image: linear-gradient(0deg, #1ea2f1, #00aff0);
+  color: #fff;
+  box-shadow: 0 5px 10px rgba(50, 50, 50, 0.2);
+  padding: 0.7em 2em;
+  font-size: 0.9em;
+  font-weight: 600;
+  border-radius: 0.5em;
+  min-height: 40px;
+  height: auto;
+
+  &:disabled {
+    background-color: #42b1e8 !important;
+    color: #fff !important;
+  }
+}

@@ -1,0 +1,106 @@
+.lock-content {
+  position: relative;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  overflow: hidden;
+
+  .feed-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(/leaf.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .count-media {
+    position: absolute;
+    bottom: 2px;
+    padding: 2px 5px;
+    font-size: 11px;
+    color: var(--colorLight);
+    text-align: center;
+  }
+
+  .lock-middle {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba($color: #EBEBEB, $alpha: .6);
+
+    @media (max-width: 550px) {
+      height: 70%;
+    }
+
+    svg {
+      font-size: 50px;
+    }
+
+    [class~="anticon"] {
+      font-size: 81px;
+      color: #29ABE2;
+      margin: 10px;
+
+      @media (max-width: 550px) {
+        font-size: 42px;
+      }
+    }
+
+    :global .ant-btn {
+      &.secondary {
+        border: none;
+        font-size: 20px !important;
+        font-weight: normal;
+        width: auto;
+        text-transform: capitalize;
+        background-color: var(--primary-light) !important;
+        color: var(--white) !important;
+      }
+
+      &:hover {
+        color: #fff !important;
+        opacity: 0.5 !important;
+      }
+
+      &.ant-btn-link {
+        font-size: 12px;
+        color: #fff;
+
+        .anticon {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  p {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    padding: 5px 15px;
+    border: 1px solid;
+    border-radius: 25px;
+    font-weight: 600;
+    background-color: var(--secondary);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    height: 215px;
+  }
+}

@@ -1,0 +1,82 @@
+.transation {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &-filter {
+    margin: 8px 0;
+    margin-bottom: 16px;
+  }
+
+  &-stas {
+    margin: 16px 0;
+  }
+
+  &-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0;
+
+    .transation {
+      &-nav {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &-item {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          width: 180px;
+          background-color: transparent;
+          color: var(--white);
+          border: 1px solid var(--aqua-blue);
+          box-shadow: 0 0 3px var(--soft-pink);
+          border-radius: 5px;
+          font-size: 18px;
+
+          &:last-child {
+            background-color: transparent;
+          }
+        }
+
+        &-lable {
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+
+        &-value {
+          font-weight: bold;
+        }
+
+        &-line {
+          height: 50%;
+          width: 1px;
+          margin: 0 8px;
+          background-color: var(--white);
+        }
+      }
+
+      &-btn {
+        :global .ant-btn-primary {
+          font-size: 12px;
+          font-weight: bold;
+          height: 40px;
+          width: fit-content;
+          min-width: 140;
+          background-color: var(--primary-light);
+
+          &:hover {
+            background-color: var(--primary-light) !important;
+          }
+
+          @media (max-width: 550px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+.stas {
+  &-list {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    border-radius: 5px;
+    border: 1px solid var(--sky-blue);
+    background-color: var(--navi-blue);
+    box-shadow: 0 0 3px var(--soft-pink);
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 100%;
+
+    svg {
+      font-size: 29px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    height: 80%;
+    padding: 0 8px;
+    border-left: 1px solid var(--white);
+
+    &-total {
+      font-size: 20px;
+    }
+
+    &-lable {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+
+      span {}
+
+      span:last-child {
+        text-transform: capitalize;
+      }
+    }
+  }
+}

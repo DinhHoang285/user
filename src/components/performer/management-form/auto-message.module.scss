@@ -1,0 +1,15 @@
+.auto-message {
+  :global {
+    .ant-input-affix-wrapper-focused {
+      background-color: transparent !important;
+
+      textarea {
+        background-color: transparent !important;
+      }
+    }
+
+    .ant-input-affix-wrapper {
+      background: none;
+    }
+  }
+}

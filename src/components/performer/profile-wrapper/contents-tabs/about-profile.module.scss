@@ -1,0 +1,94 @@
+.about {
+  &-wrapper {
+    margin: 0;
+  }
+
+  &-header {
+    &-name {
+      font-size: 20px;
+      color: var(--pink);
+    }
+
+    &-username {
+      font-size: 13px;
+      color: var(--electric-blue);
+
+      svg {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &-main {
+    margin: 8px 0;
+
+    &-stas {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      p {
+        margin: 0;
+        font-size: 13px;
+        text-transform: capitalize;
+
+        span {
+          margin: 0 4px;
+        }
+      }
+    }
+
+    &-bio {
+      font-size: 13px;
+
+      p {
+        margin: 0;
+      }
+    }
+
+    &-more {
+      &-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        svg {}
+
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    :global .ant-collapse {
+      margin: 4px 0;
+      color: white;
+
+      &-item {}
+
+      &-header {
+        color: var(--electric-blue) !important;
+        padding: 0 !important;
+
+        &-text {
+          font-size: 16px;
+        }
+      }
+
+      &-content {
+        &-box {
+          padding: 0 !important;
+        }
+
+        .ant-descriptions {
+          color: var(--white) !important;
+
+          &-item-content {
+            color: var(--white);
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+}

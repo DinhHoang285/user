@@ -1,0 +1,31 @@
+.follow-btn {
+  margin: 0 2px;
+  cursor: pointer;
+  color: var(--electric-blue);
+  font-weight: 500;
+  background: none;
+  background-color: transparent;
+  border: 1px solid var(--light-grey);
+  position: relative;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  padding: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 50%;
+
+  svg {
+    height: 25px;
+    width: auto;
+  }
+
+  &:hover,
+  &active {
+    cursor: pointer;
+    color: var(--neon-blue);
+    border-color: var(--neon-blue);
+  }
+}

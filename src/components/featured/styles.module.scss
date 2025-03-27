@@ -1,0 +1,29 @@
+.featured {
+  &-wrapper {
+    margin: 8px 0;
+  }
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    &-mark {
+      width: 16px;
+      height: 43px;
+      background-color: #09b3f2;
+      border-radius: 8px;
+    }
+    &-title {
+      font-size: 19.16px;
+    }
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+    @media (max-width: 550px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

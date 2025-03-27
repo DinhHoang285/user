@@ -1,0 +1,18 @@
+.dropdown-options {
+  cursor: pointer;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background-color: transparent;
+  color: #FFFF;
+  padding: 0;
+}
+
+.dropdown {
+  :global {
+    .ant-dropdown-menu {
+      background-color: var(--light-black);
+    }
+  }
+}

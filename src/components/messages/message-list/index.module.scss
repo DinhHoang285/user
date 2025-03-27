@@ -1,0 +1,118 @@
+.message-list {
+  width: 100%;
+  height: calc(100% - 150px);
+  position: relative;
+
+  :global {
+    .message-list-container {
+      padding: 10px 10px 60px;
+      max-height: 100%;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .message {
+        &:first-child {
+          margin-top: 7px;
+        }
+
+        &:last-child {
+          .bubble-container .bubble {
+            margin-bottom: 0px;
+          }
+        }
+      }
+
+      @media all and (max-width: 550px) {
+        padding: 5px;
+
+        @supports (-webkit-touch-callout: none) {
+          padding-bottom: 205px;
+        }
+      }
+    }
+  }
+
+  .sub-text {
+    text-align: center;
+    background-color: var(--primary-light);
+    color: var(--white);
+    border-radius: 8px;
+    margin: 25px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+    @media all and (max-width: 550px) {
+      font-size: 14px;
+    }
+  }
+
+  .sub-text-subscribe {
+    text-align: center;
+    background-color: transparent;
+    color: var(--primary-light);
+    border-radius: 8px;
+    margin: 25px 0;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+
+  }
+
+  @media all and (max-width: 550px) {
+    height: calc(100% - 200px);
+
+    .sub-text-subscribe {
+      font-size: 14px;
+    }
+  }
+}
+
+.mess-recipient {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--sky-blue);
+  padding: 5px;
+
+  :global {
+    .recipient-item {
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      img {
+        width: 31px;
+        height: 31px;
+        margin-right: 5px;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+
+      svg {
+        color: var(--primary);
+        height: 14px;
+        width: auto;
+        margin-left: 2px;
+      }
+
+    }
+
+    .more-btn {
+      background-color: transparent;
+      border: 0;
+
+      svg {
+        color: var(--white);
+      }
+    }
+
+    .close-btn {
+      font-size: 20px;
+      color: var(--black);
+    }
+  }
+}

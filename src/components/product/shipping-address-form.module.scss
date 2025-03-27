@@ -1,0 +1,79 @@
+.my-shipping-container {
+  :global {
+    .save-button {
+      background-color: var(--primary-light) !important;
+      color: #fff;
+      box-shadow: 0 5px 10px #32323233;
+      padding: 0.7em 2em;
+      font-size: 0.9em;
+      font-weight: 600;
+      border-radius: 0.5em;
+      min-height: 40px;
+      height: auto;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: var(--primary);
+        color: #fff;
+      }
+
+      &.primary {
+        background-color: var(--primary-light);
+      }
+
+      .loader {
+        border: 3px solid rgba(255, 255, 255, 0.3);
+        border-top: 3px solid white;
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+        animation: spin 1s linear infinite;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 8px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    }
+
+    .cancel-button {
+      border: none;
+      background: var(--secondary);
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+      padding: 0.7em 2em;
+      font-size: 0.9em;
+      font-weight: 600;
+      border-radius: 0.5em;
+      min-height: 40px;
+      height: auto;
+      color: #fff;
+
+      &:hover {
+        background-color: var(--secondary);
+        color: #fff;
+      }
+    }
+
+    .delete-button {
+      border: none;
+      font-size: 14px;
+      height: 32px;
+      padding: 0px 15px;
+      border-radius: 6px;
+      box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
+      color: #fff;
+      background: #1677ff;
+      outline: none
+    }
+  }
+}

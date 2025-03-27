@@ -1,0 +1,25 @@
+.cmt-reels-drawer {
+  width: 500px;
+  padding: 10px;
+
+  .cmt-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  @media screen and (max-width: 550px) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-height: 100dvh;
+    width: 100vw;
+    overflow-y: auto;
+    background-color: var(--black);
+    z-index: 9;
+  }
+}

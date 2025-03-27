@@ -1,0 +1,47 @@
+.container-table {
+  width: 100%;
+
+  table {
+    width: 100%;
+  }
+
+  :global {
+    .ant-table-tbody {
+      .ant-table-cell {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.table-list {
+  &-type {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    color: var(--white);
+  }
+
+  &-thumb {
+    margin: 0 auto;
+    display: block;
+    width: 90%;
+    max-width: 96px;
+    height: 55px;
+
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+
+  :global .ant-btn {
+    background: unset;
+    color: rgba(0, 0, 0, 0.88);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+  }
+}

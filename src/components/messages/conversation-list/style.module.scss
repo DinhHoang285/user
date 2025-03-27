@@ -1,0 +1,60 @@
+.conversation-list {
+  height: calc(100% - 156px);
+  width: 100%;
+  overflow: auto;
+  padding: 0 0 20px;
+}
+
+.user-bl {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--electric-blue);
+  font-size: 15px;
+  height: 54px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border-bottom: 1px solid var(--sky-blue);
+
+  &.active,
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to left, #1b3f5a, #082344);
+  }
+
+  :global .anticon {
+    font-size: 25px;
+  }
+}
+
+.delete-c-grp {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--gray);
+
+  :global {
+    .select-btn {
+      height: 56px;
+      font-size: 14px;
+      color: var(--grey);
+
+      &.active {
+        color: var(--darkgray);
+      }
+    }
+
+    .delete-btn {
+      height: 56px;
+      color: var(--darkgray);
+
+      &.active {
+        color: var(--primary);
+      }
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+}

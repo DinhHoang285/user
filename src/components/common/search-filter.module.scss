@@ -1,0 +1,146 @@
+.search-filter {
+  width: auto;
+  margin: 0px -5px;
+  margin-bottom: 8px;
+  display: flex;
+  flex-flow: row wrap;
+  font-size: 14px;
+  box-sizing: border-box;
+
+  button {
+    a {
+      color: var(--white);
+    }
+  }
+
+  :global {
+    .ant-col {
+      flex: 0 0 25%;
+      max-width: 25%;
+      box-sizing: border-box;
+      position: relative;
+      max-width: 100%;
+      min-height: 1px;
+
+      .ant-select {
+        display: flex;
+        box-sizing: border-box;
+        border: 1px solid var(--aqua-blue);
+        box-shadow: 0 0 3px var(--soft-pink);
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5714285714285714;
+        list-style: none;
+        font-family: inherit;
+        display: flex;
+        justify-content: space-between;
+        border-radius: 6px;
+        height: 40px;
+        padding: 0 12px;
+        width: 100%;
+
+        .ant-select-selector {
+          border: none !important;
+          box-shadow: none !important;
+          padding-right: 4px;
+          padding-left: 11px;
+
+          .ant-select-selection-search {
+            display: none;
+          }
+
+          .ant-select-selection-item {
+            height: 100%;
+          }
+        }
+
+        .ant-select-clear {
+          display: none;
+        }
+
+        .ant-select-arrow {
+          .anticon {
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    .ant-col {
+      .ant-picker {
+        width: 100%;
+        display: flex;
+        height: 40px;
+        background-color: transparent;
+        border-radius: 6px;
+        box-sizing: border-box;
+
+        .ant-picker-input {
+          box-sizing: border-box;
+          overflow: hidden;
+          width: 140px;
+
+          input {
+            background-color: transparent;
+            color: var(--white);
+            height: 100%;
+            border: none;
+
+            &::placeholder {
+              color: var(--silver-gray);
+              opacity: 1;
+            }
+          }
+        }
+
+        .ant-picker-range-separator {
+          width: 32px;
+        }
+
+        .ant-picker-range-separator,
+        .ant-picker-suffix {
+          .anticon {
+            height: 100%;
+            color: transparent;
+          }
+        }
+      }
+    }
+
+    .ant-col-lg-8 {
+      --ant-display: block;
+      display: block;
+      display: var(--ant-display);
+      flex: 0 0 33.33333333333333%;
+      max-width: 33.33333333333333%;
+    }
+
+
+
+  }
+
+  @media (max-width: 550px) {
+    .order-first {
+      width: 100%;
+      order: 1;
+    }
+
+    .order-default {
+      order: 2;
+    }
+
+    :global {
+      .ant-col-xs-12 {
+        --ant-display: block;
+        display: block;
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+
+  }
+
+  @media screen and (min-width: 767px) {
+    flex-wrap: wrap;
+  }
+}

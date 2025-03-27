@@ -1,0 +1,16 @@
+.container {
+  width: 100%;
+
+  .boxReason {
+    width: 100%;
+    color: var(--white);
+    margin-bottom: 8px;
+  }
+
+  :global {
+    .ant-col {
+      max-width: 100% !important;
+    }
+  }
+
+}

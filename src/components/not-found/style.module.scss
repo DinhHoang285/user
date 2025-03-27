@@ -1,0 +1,37 @@
+.not-found-page {
+  margin: 90px 0;
+
+  .not-found-bl {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 80px;
+
+    .not-found-txt {
+      width: 100%;
+      text-align: center;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--white);
+        line-height: 30px;
+      }
+
+      h2 {
+        color: var(--white);
+      }
+    }
+
+    :global {
+      .ant-result-title {
+        color: var(--primary);
+      }
+
+      .ant-result-subtitle {
+        color: var(--white);
+      }
+    }
+  }
+}

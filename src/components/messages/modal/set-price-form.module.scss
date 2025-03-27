@@ -1,0 +1,27 @@
+.price-message-form {
+  .form-lb {
+    font-size: 16px;
+    color: var(--white)
+  }
+
+  .btn-grps {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 15px 5px;
+
+    .ant-btn {
+      margin-left: 10px;
+    }
+  }
+
+  :global {
+    .ant-select-selection-item {
+      color: var(--white) !important;
+    }
+
+    .ant-picker .ant-picker-input>input[disabled] {
+      color: var(--silver-gray) !important;
+    }
+  }
+}

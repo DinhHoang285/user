@@ -1,0 +1,147 @@
+.form {
+  &-group {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8;
+    width: 50vw;
+  }
+
+  &-header {}
+
+  &-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--white);
+  }
+
+  &-sub {
+    margin: 0;
+    color: gray;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    gap: 8;
+
+    &-logo {
+      display: flex;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+
+      p {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: rgb(247, 244, 244);
+
+        svg {
+          transform: scale(1.2);
+        }
+      }
+    }
+
+    &-content {
+      flex: 1;
+
+      &-title {
+        margin: 0;
+        font-weight: bold;
+        color: var(--white);
+      }
+
+      &-sub {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        gap: 8;
+        color: gray;
+      }
+
+      &-sub-lable {
+        margin: 0;
+        margin-right: 8px;
+      }
+    }
+
+    &-action {
+      :global {
+        .ant-btn-default {
+          color: var(--white);
+          background-color: var(--royal-blue);
+          border-color: var(--royal-blue);
+        }
+      }
+
+      &-unlink {
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        color: var(--white);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.edit-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  &-input {
+    height: 36px;
+    width: 180px;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid var(--aqua-blue);
+    box-shadow: 0 0 3px var(--soft-pink);
+    border-radius: 5px;
+    color: var(--white);
+    padding: 0 8px;
+  }
+
+  &-action {
+    display: flex;
+    gap: 4px;
+
+    button {
+      height: 36px;
+      min-width: 40px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      :hover {
+        opacity: 0.9;
+      }
+    }
+
+    &-save {
+      color: var(--primary);
+    }
+
+    &-close {
+      color: var(--white);
+    }
+  }
+}

@@ -1,0 +1,50 @@
+.tip-btn {
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  outline: none;
+  box-shadow: none;
+  border: unset;
+  color: var(--white);
+  transform: translateY(0%);
+
+  :global .anticon {
+    font-size: 20px;
+    color: var(--white);
+  }
+
+  .txt {
+    margin-left: 8px;
+    margin-top: 6px;
+    transform: translateY(-10%);
+    font-weight: 500;
+    color: #e7e7e7;
+    text-transform: capitalize;
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &:disabled {
+    background-color: transparent;
+  }
+
+  &.inContentView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+
+    svg {
+      font-size: 25px;
+      color: var(--neon-blue);
+    }
+  }
+
+  svg {
+    font-size: 25px;
+  }
+}

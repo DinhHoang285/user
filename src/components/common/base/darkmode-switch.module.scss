@@ -1,0 +1,12 @@
+.switch-theme {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+
+  :global {
+    .anticon {
+      font-size: 20px;
+    }
+  }
+}

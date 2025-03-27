@@ -1,0 +1,149 @@
+.media-card {
+  margin-bottom: 25px;
+  border-bottom: 0.5px solid #42b1e8;
+
+  .media-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+
+    .media-top-left {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+
+      .media-name {
+        padding: 0 10px;
+
+        .name {
+          font-size: 14px;
+          margin: 0;
+          text-transform: capitalize;
+          display: inline-flex;
+          align-items: center;
+          color: var(--pink);
+
+          [class~='anticon'] {
+            margin-left: 2px;
+            font-size: 16px;
+          }
+        }
+
+        .username {
+          font-size: 13px;
+          color: var(--white);
+          margin: 0;
+        }
+      }
+
+      .online-status {
+        width: 8px;
+        height: 8px;
+        background-color: var(--gray);
+        border-radius: 50%;
+        position: absolute;
+        bottom: 12px;
+        left: 34px;
+
+        &.active {
+          background-color: var(--green);
+        }
+      }
+    }
+
+    .media-top-right {
+      display: flex;
+      align-items: center;
+
+      .media-time {
+        font-size: 14px;
+        color: var(--white);
+        margin: 0 10px;
+        white-space: nowrap;
+        text-align: right;
+      }
+
+      .dropdown-options {
+        font-size: 14px;
+        color: var(--grey);
+      }
+
+      .media-pin {
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: 20px;
+          color: #FF0066;
+        }
+      }
+    }
+  }
+
+  .media-container {
+    margin-bottom: 16px;
+
+    .media-title {
+      font-size: 15px;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+      color: var(--cyan-blue);
+    }
+
+    .media-text {
+      margin: 10px 0;
+      font-size: 13px;
+      white-space: pre-line;
+      overflow-wrap: break-word;
+
+      &::first-letter {
+        text-transform: capitalize;
+      }
+
+      span {
+        margin: 0 2px;
+      }
+    }
+  }
+
+  .media-actions {
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+
+    .action-item {
+      width: 100%;
+      align-items: center;
+      display: flex;
+      gap: 8px;
+
+      &:last-child {
+        justify-content: flex-end;
+        width: 25%;
+      }
+
+      button:first-child,
+      button:nth-child(2) {
+        svg {
+          transform: translateX(-12%);
+        }
+      }
+
+      button:nth-child(4),
+      button:last-child {
+        svg {
+          transform: translate(5%);
+        }
+      }
+    }
+
+
+  }
+}

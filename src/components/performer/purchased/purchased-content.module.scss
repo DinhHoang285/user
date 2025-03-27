@@ -1,0 +1,206 @@
+.content {
+
+  .bookmark-heading {
+    padding: 10px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #6ecddf;
+    flex-wrap: nowrap;
+    z-index: 9;
+    background-color: var(--navi-black);
+    max-width: 1080px;
+    box-sizing: border-box;
+
+    .left-side {
+      display: flex;
+      align-items: center;
+      gap: 45px;
+
+      h3 {
+        color: var(--white);
+        font-size: 16px;
+        margin: 0;
+        text-transform: uppercase;
+      }
+    }
+
+    .right-side {
+      display: flex;
+      align-items: center;
+
+      .actions-btn {
+        &-list {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        &-grid {
+          cursor: pointer;
+          margin-right: 12px;
+
+          svg {
+            font-size: 22px;
+          }
+        }
+
+        &-search {
+          gap: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          [class~='ant-input-affix-wrapper'] {
+            opacity: 0;
+            border: none;
+            padding: 0;
+            outline: none;
+            box-shadow: none;
+            background: none;
+            color: var(--white) !important;
+            transition: opacity 0.3s ease-in-out;
+            visibility: hidden;
+            width: 0;
+            transition: all ease-in-out 0.5s;
+
+            &.active {
+              visibility: visible;
+              opacity: 1;
+              bottom: 1px;
+              width: 240px;
+            }
+
+            [class~='ant-input-prefix'] {
+              font-size: 22px;
+            }
+
+            input {
+              height: 30px;
+
+              &::placeholder {
+                color: var(--silver-gray);
+              }
+            }
+          }
+
+          .open-search {
+            color: var(--white);
+
+            [class~='anticon'] {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .search-bar-feed {
+      width: 35%;
+      padding-left: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      [class~='ant-input-affix-wrapper'] {
+        opacity: 0;
+        border: none;
+        padding: 0;
+        outline: none;
+        box-shadow: none;
+        background: none;
+        color: var(--white);
+        transition: opacity 0.3s ease-in-out;
+        visibility: hidden;
+
+        &.active {
+          visibility: visible;
+          opacity: 1;
+          bottom: 1px;
+        }
+
+        [class~='ant-input-prefix'] {
+          font-size: 25px;
+          margin-right: 10px;
+        }
+
+        input {
+          height: 30px;
+        }
+      }
+
+      .open-search {
+        color: var(--white);
+
+        [class~='anticon'] {
+          font-size: 20px;
+        }
+      }
+
+      .button-play {
+        margin-right: 12px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      .bookmark-heading {
+        max-width: 720px;
+
+        .search-bar-feed {
+          right: 10px;
+          position: absolute;
+          width: 70%;
+        }
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      .search-bar-feed {
+        right: 16px;
+        position: absolute;
+        width: 70%;
+      }
+    }
+  }
+
+  .bookmark-header-bottom {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 7px;
+
+    @media (max-width: 550px) {
+      width: 90vw;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    .purchase-btn {
+      width: 80px;
+      height: 40px;
+      border-radius: 10px;
+      color: var(--white);
+      background-color: transparent;
+      border: 1px solid var(--royal-blue);
+
+      &.active {
+        color: var(--white);
+        background-color: var(--royal-blue);
+      }
+
+      &:hover {
+        color: var(--white) !important;
+        background-color: var(--royal-blue) !important;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,172 @@
+.reel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  scroll-snap-align: start;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  .player-container {
+    position: relative;
+    max-width: 550px;
+    background-color: #000;
+  }
+
+  :global {
+    progress[value] {
+      appearance: none;
+      /* Needed for Safari */
+      border: none;
+      /* Needed for Firefox */
+      color: var(--secondary);
+      /* Fallback to a solid color */
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+    }
+
+    /* WebKit styles */
+    progress[value]::-webkit-progress-value {
+      background-image: linear-gradient(to right,
+          var(--orange), var(--secondary));
+      transition: width 0.1s linear;
+    }
+
+    /* Firefox styles */
+    progress[value]::-moz-progress-bar {
+      background-image: -moz-linear-gradient(right,
+          var(--orange), var(--secondary));
+    }
+
+    .reel-player {
+      height: 100dvh;
+      display: flex;
+
+      .pause-btn {
+        display: none;
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+
+        &.active {
+          position: absolute;
+          left: calc(50% - 20px);
+          top: calc(50% - 20px);
+          display: block;
+          color: #fff;
+
+          svg {
+            height: 40px;
+            width: auto;
+          }
+        }
+
+        .loader {
+          animation: spin 1s linear infinite;
+        }
+      }
+
+      .playback-line {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 8px;
+        background-color: var(--gray);
+        width: 100%;
+        cursor: pointer;
+      }
+
+      .progress-bar {
+        height: 100%;
+        width: 0;
+        background-image: linear-gradient(to right, var(--orange), var(--secondary));
+        transition: width 0.1s linear;
+      }
+    }
+  }
+}
+
+.video-notAllow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  max-width: 550px;
+
+  &-image {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .lock-button {
+    border: none;
+    order: none;
+    font-size: 20px;
+    font-weight: 400;
+    width: auto;
+    text-transform: capitalize;
+    background-color: var(--primary-light);
+    border-radius: .5em;
+    min-height: 40px;
+    height: auto;
+    color: #fff;
+  }
+
+  &-content {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(235, 235, 235, 0.6);
+
+    >div {
+      width: 100%;
+      height: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #d8d5d599;
+
+      h3 {
+        color: var(--primary);
+      }
+
+      p {
+        font-size: 50px;
+        color: var(--electric-blue);
+      }
+
+      :global {
+        .ant-btn {
+          border: none;
+          order: none;
+          font-size: 20px;
+          font-weight: 400;
+          width: auto;
+          text-transform: capitalize;
+          background-color: var(--primary-light);
+        }
+      }
+    }
+
+    svg {
+      font-size: 50px;
+    }
+  }
+}

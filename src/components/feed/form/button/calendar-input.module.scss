@@ -1,0 +1,101 @@
+.calendar-input {
+  position: relative;
+  border: 1px solid var(--border-color-form-container-group) !important;
+  border-radius: 25px;
+  background: var(--bg-form-container-group);
+  display: flex;
+
+  input {
+    max-height: 50px;
+    padding: 21px 20px 8px !important;
+    border-radius: 25px;
+    background: none;
+    color: var(--color-form-container-input);
+    width: 100%;
+    font-family: "proxima_novasemibold" !important;
+    font-size: 16px;
+    position: relative;
+    border: none !important;
+    background-color: transparent !important;
+    z-index: 1;
+    outline: none;
+
+  }
+
+  .title-input {
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 18px 20px;
+    padding-top: 14px;
+    font-size: 16px;
+    transform: translate3d(0, 0, 0);
+    transition: all 0.3s;
+    font-family: "proxima_novaregular";
+    pointer-events: none;
+    color: var(--color-form-container-span);
+
+    &.scroll {
+      top: -50px;
+    }
+  }
+
+  button {
+    border: 0;
+    background: none;
+    padding: 5px 20px;
+    cursor: pointer;
+    transform: all 200ms;
+
+    &:hover svg {
+      stroke: var(--body-color);
+    }
+  }
+}
+
+.focused {
+  .title-input {
+    font-size: 12px;
+    font-family: "proxima_novaregular" !important;
+    padding-top: 18px;
+    transform: translate3d(0, -10px, 0);
+    padding: 17px 0 0 20px;
+  }
+}
+
+.calendar-popup {
+
+  border: 1px solid #259ED2;
+  border-radius: 15px;
+  overflow: hidden;
+
+  :global {
+    .ant-modal-content {
+      padding: 0 !important;
+
+      .ant-modal-header {
+        border: 0;
+        margin-bottom: 0;
+        padding: 20px;
+        padding-bottom: 0;
+      }
+    }
+
+    .bottom {
+      padding: 10px 20px;
+
+      text-align: center;
+
+      .ant-btn.btn-submit {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.showtime {
+  :global {
+    .data_time {}
+  }
+}

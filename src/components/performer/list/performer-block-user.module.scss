@@ -1,0 +1,53 @@
+.block-user {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    .block-button {
+        color: #fff;
+        background: var(--brilliant-blue);
+        font-size: 14px;
+        height: 32px;
+        padding: 4px 15px;
+        border-radius: 6px;
+        margin: 0;
+        border: none;
+    }
+
+    :global {
+        .ant-btn {
+            color: #fff;
+            background: var(--brilliant-blue);
+            font-size: 14px;
+            height: 32px;
+            padding: 4px 15px;
+            border-radius: 6px;
+            margin: 0;
+            border: none;
+        }
+    }
+}
+
+.block-modal {
+
+    .block-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 20px;
+    }
+}
+
+.close-button {
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+    box-shadow: 0 4px 4px #0000001a;
+    font-size: 0.9em;
+    font-weight: 600;
+    border-radius: 0.5em;
+    min-height: 40px;
+    height: auto;
+    color: #fff;
+    padding: 0 15px;
+    border: none;
+    cursor: pointer;
+}

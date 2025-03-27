@@ -1,0 +1,68 @@
+.subcriptions {
+  &-wrapper {}
+
+  &-header {
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #42b1e8;
+  }
+
+  &-list {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+
+    :global {
+      .ant-btn {
+        background-color: var(--royal-blue) !important;
+        color: var(--white) !important;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 46px;
+        font-size: 16px;
+        border: none !important;
+      }
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 46px;
+    font-size: 16px;
+    background-color: var(--royal-blue);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+
+    &:hover {
+      color: var(--white) !important;
+      background-color: var(--royal-blue) !important;
+    }
+
+    &.isFreeSubcription {
+      background-color: #09162e !important;
+      color: var(--white) !important;
+
+      &:hover {
+        background-color: #09162e !important;
+        color: var(--white) !important;
+      }
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--royal-blue);
+      color: var(--white);
+    }
+  }
+
+  &-name {
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,31 @@
+.stats-earning {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px 0;
+
+  :global .ant-statistic {
+    padding: 0 10px;
+    color: var(--black);
+    text-align: center;
+
+    .ant-statistic-title,
+    .ant-statistic-content {
+      color: var(--black);
+    }
+  }
+}
+
+.earning-transation {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  &-header {
+    margin: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}

@@ -1,0 +1,29 @@
+.container {
+  width: 100%;
+
+  .box-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+
+    p {
+      color: var(--white);
+    }
+  }
+
+  :global {
+    .ant-form {
+      width: 100%;
+
+      .ant-form-item {
+        .ant-row {
+          // flex-direction: column;
+        }
+
+        .ant-col {
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+}

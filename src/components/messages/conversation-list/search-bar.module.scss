@@ -1,0 +1,50 @@
+.conversation-search {
+  margin: 12px 0;
+  padding: 0 12px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  :global .ant-input-group-wrapper {
+    .ant-input-group-addon {
+      border: none;
+      font-size: 20px;
+      color: var(--neon-blue);
+      background-color: transparent;
+      border: 1px solid var(--sky-blue);
+      border-right: none;
+    }
+
+    .ant-input {
+      padding: 8px 10px;
+      font-size: 14px;
+      width: 100%;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: var(--white);
+      font-size: 0.9em;
+      height: 40px;
+      text-align: left;
+      border: 1px solid var(--sky-blue);
+      border-left: none;
+    }
+
+    .ant-input::placeholder {
+      text-align: left;
+      color: var(--silver-gray);
+      opacity: 1 !important;
+    }
+  }
+}
+
+[data-theme='dark'] .conversation-search {
+  :global .ant-input-group-wrapper {
+    .ant-input {
+      color: var(--black);
+
+      &::placeholder {
+        color: var(--black);
+      }
+    }
+  }
+}

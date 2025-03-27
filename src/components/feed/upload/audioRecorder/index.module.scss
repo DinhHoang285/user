@@ -1,0 +1,57 @@
+.record {
+  &-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 113px;
+    width: 200px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--aqua-blue);
+    box-shadow: 0 0 3px var(--soft-pink);
+    border-radius: 5px;
+  }
+
+  &-disable {
+    opacity: 0.8;
+  }
+
+  &-icon {
+    font-size: 28px;
+    cursor: pointer;
+  }
+
+  &-title {
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: bold;
+  }
+
+  &-nav {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 5px;
+      background-color: var(--blue);
+      cursor: pointer;
+    }
+
+    &-main {
+      height: 24px;
+      font-weight: bold;
+    }
+  }
+
+  &-counter {}
+}

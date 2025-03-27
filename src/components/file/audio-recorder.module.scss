@@ -1,0 +1,113 @@
+.audio-recorder {
+  .recorder {
+    margin: 8px auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+
+    .timer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 100%;
+      background-color: var(--primary-light);
+      cursor: pointer;
+      margin-bottom: 8px;
+      color: var(--white);
+      // margin-left: 10px;
+      // font-size: 18px;
+      // text-align: center;
+      // font-weight: 600;
+      // color: var(--black);
+    }
+
+    .microphone {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .waves {
+        z-index: 0;
+        position: absolute;
+        height: 50px;
+        background-image: url("/sound-wave.gif");
+        background-size: contain;
+        background-position: center;
+        width: 100%;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      .start-btn {
+        padding: 0;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 1;
+        color: var(--primary-light);
+        box-shadow: none;
+        opacity: 1;
+        border: none;
+        background-color: transparent;
+        gap: 10px;
+
+        button {
+          width: 45px;
+          height: 45px;
+          border: none;
+          border-radius: 100%;
+          background-color: var(--primary-light);
+          cursor: pointer;
+          margin-bottom: 8px;
+
+
+          svg {
+            font-size: 20px;
+            color: var(--white);
+          }
+        }
+      }
+
+      .record-btn {}
+
+      @media (max-width: 550px) {
+        .start-btn {
+          margin-bottom: 40px;
+        }
+      }
+    }
+
+    .mic-txt {
+      text-align: center;
+      font-size: 11px;
+      color: var(--grey);
+    }
+
+    .btn-grps {
+      display: flex;
+      justify-content: center;
+
+      .ant-btn {
+        border: none;
+        font-size: 14px;
+        color: #3f8cff;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+          font-size: 32px;
+        }
+      }
+    }
+
+  }
+}

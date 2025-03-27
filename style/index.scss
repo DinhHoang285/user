@@ -1,0 +1,95 @@
+@use "sass:meta";
+@import 'antd/dist/reset.css';
+@include meta.load-css('variables.scss');
+@include meta.load-css('global.scss');
+@include meta.load-css('darkmode.scss');
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--grey);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+  border-radius: 10px;
+}
+
+body {
+  margin: 0;
+  background: transparent linear-gradient(180deg, #0C0D12 0%, #010D3D 100%) 0% 0% no-repeat padding-box;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 23px;
+
+}
+
+
+.body-content {
+  background: transparent linear-gradient(180deg, #0C0D12 0%, #010D3D 100%) 0% 0% no-repeat padding-box;
+  padding-bottom: 20px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (max-width: 550px) {
+    width: 100vw;
+    box-sizing: border-box;
+  }
+}
+
+.main-container {
+  min-height: 80dvh;
+  padding: 60px 0 0;
+}
+
+.feed-container {
+  max-width: 682px;
+  margin: 0 auto;
+}
+
+.infinite-scroll-component {
+  overflow: unset !important;
+}
+
+button {
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  textarea:focus,
+  input:focus {
+    font-size: 16px !important;
+
+    &:placeholder-shown {
+      font-size: 14px !important;
+
+      @media screen and (max-width: 550px) {
+        font-size: 16px !important;
+      }
+    }
+  }
+}

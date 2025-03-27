@@ -1,0 +1,124 @@
+.container {
+  width: 100%;
+  background-color: transparent;
+
+  .box-avatar {
+    width: 112px;
+    height: 112px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    z-index: 9;
+    transform: translateX(-50%);
+    border: 2px solid #CE6ACF;
+    border-radius: 50%;
+
+    :global {
+      .ant-avatar {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .box-content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 382px;
+    height: 300px;
+    border: 1px solid #259ED2;
+    background-color: var(--light-black);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding-top: 60px;
+
+    .info {
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      align-items: center;
+
+      :global {
+        .lock-icon {
+          width: 35px;
+          height: 35px;
+        }
+
+        .name {
+          width: fit-content;
+          height: 48px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          .p-name {
+            font-size: 20px;
+            height: fit-content;
+            color: #E776E3;
+            line-height: 24px;
+          }
+
+          .p-username {
+            font-size: 13px;
+            height: fit-content;
+            color: var(--electric-blue);
+            line-height: 12px;
+          }
+        }
+      }
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      margin-top: 18px;
+      font-size: 20px;
+
+      :global {
+        .username {
+          color: #E776E3;
+        }
+      }
+    }
+
+    .box-select {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 12px;
+
+      :global {
+        .ant-select {
+          .ant-select-selector {
+            border: 1px solid #259ED2 !important;
+            border-radius: 21px;
+            opacity: 1;
+            box-shadow: none !important;
+          }
+        }
+      }
+    }
+
+    .box-submit {
+      width: 100%;
+      text-align: center;
+
+      .submit-tip-btn {
+        height: 41px;
+        width: 314px;
+        margin-top: 12px;
+        text-align: center;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        opacity: 1;
+        background: #0558A5 0% 0% no-repeat padding-box;
+        border-radius: 21px;
+        border: none;
+      }
+    }
+
+  }
+}

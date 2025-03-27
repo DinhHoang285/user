@@ -1,0 +1,99 @@
+.form-login {
+  margin: 0 auto;
+
+  :global .ant-form-item {
+
+    .ant-form-item-control {
+      padding: 7px 0;
+    }
+
+    input {
+      border-radius: 50px;
+      padding: 0 20px;
+      width: 100%;
+      height: 50px;
+      background-color: transparent;
+      color: var(--white);
+      border: 1px solid var(--aqua-blue);
+      box-shadow: 0 0 3px var(--soft-pink);
+
+      @media (max-width: 550px) {
+        font-size: 16px;
+      }
+    }
+
+    input::placeholder {
+      color: var(--silver-gray);
+      font-style: italic;
+      font-size: 14px;
+      opacity: 0.8;
+
+    }
+
+    .ant-input-status-success {
+      color: var(--white);
+      background-color: transparent !important;
+    }
+
+    .ant-input-status-error {
+      background-color: transparent !important;
+      color: var(--white) !important;
+    }
+
+    .ant-form .ant-form-item .ant-input-outlined.ant-input-status-error:not(.ant-input-disabled) {
+      color: var(--white) !important;
+    }
+
+    .ant-input-password {
+      border-radius: 25px;
+      padding: 0 20px;
+      color: var(--white);
+      border: 1px solid var(--aqua-blue);
+      box-shadow: 0 0 3px var(--soft-pink);
+
+      input {
+        border-radius: 25px;
+        padding: 0 9px;
+        border: none;
+        box-shadow: none;
+
+        @media (max-width: 550px) {
+          font-size: 16px;
+        }
+
+      }
+
+      .ant-input-suffix {
+        span {
+          color: var(--white);
+        }
+      }
+    }
+  }
+
+  .forgot-pass {
+    margin: 8px;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--primary) !important;
+  }
+}
+
+.btn-login {
+  width: 100%;
+  background-color: var(--primary-light);
+  color: #fff;
+  height: 48px;
+  border-radius: 50px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.login-form-devide {
+  margin: 16px 0;
+  height: 1px;
+  background-color: var(--aqua-blue);
+  box-shadow: 0 0 3px var(--soft-pink);
+}

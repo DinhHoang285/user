@@ -1,0 +1,141 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  :global {
+    .upload {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .product-uploader {
+      border: 1px solid #42B1E8;
+      border-radius: 5px;
+
+      .img-upload {
+        color: #FFF;
+      }
+    }
+
+    .product-uploader-digital {
+      width: 102px;
+      height: 95px;
+      border: 1px solid #42B1E8;
+      border-radius: 5px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        object-fit: contain;
+      }
+    }
+
+    .upload-digital {
+      border: 1px solid #42B1E8;
+      border-radius: 5px;
+    }
+
+    .ant-upload {
+      border: none !important;
+      width: 100%;
+    }
+
+    .ant-upload-wrapper {
+      width: 170px;
+      min-height: 95px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+
+      .ant-upload-select {
+        width: 100% !important;
+        height: 100% !important;
+
+        img {
+          box-sizing: border-box;
+          width: 100%;
+          height: 100%;
+          border-radius: 5px;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  .box-upload-digital {
+    width: 170px;
+    min-height: 73px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #42B1E8;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #FFF;
+  }
+
+  .box-image {
+    width: 100%;
+    height: 224px;
+    position: relative;
+
+    .box-delete {
+      cursor: pointer;
+      background-color: #BA2025;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+
+      svg {
+        color: #FFFF;
+      }
+    }
+  }
+
+  .box-image-digital {
+    position: relative;
+
+    .box-delete {
+      cursor: pointer;
+      background-color: #BA2025;
+      border: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 5px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+
+      svg {
+        color: #FFFF;
+      }
+    }
+  }
+
+  .form-item-title {
+    color: #FFFF;
+    margin-bottom: 8px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    text-align: center;
+  }
+}

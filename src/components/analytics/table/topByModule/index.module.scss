@@ -1,0 +1,23 @@
+.table {
+  &-wrapper {
+    * {
+      border: 1px solid transparent !important;
+    }
+  }
+  &-description {
+    height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
+
+// .select {
+//   &-wrapper {
+//     display: flex;
+//     align-items: center;
+//     gap: 16px;
+//   }
+// }

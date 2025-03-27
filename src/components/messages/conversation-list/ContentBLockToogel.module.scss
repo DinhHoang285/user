@@ -1,0 +1,27 @@
+.content-block-wrapper {
+  margin: 0;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  font-size: 17px;
+  background-color: transparent;
+  color: var(--white);
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--sky-blue);
+  margin-bottom: 16px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+
+  span {
+    margin: 0 4px;
+  }
+
+  &:hover,
+  &.active {
+    color: var(--neon-blue);
+    background: linear-gradient(to right, #103860, #254d52);
+  }
+}

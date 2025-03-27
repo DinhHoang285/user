@@ -1,0 +1,99 @@
+.adCard {
+  &-wrapper {
+    margin-bottom: 25px;
+    border-bottom: 0.5px solid var(--light-grey);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+      }
+
+      div {
+        * {
+          margin: 0;
+        }
+
+        h4 {
+          font-size: 14px;
+          color: var(--primary);
+        }
+
+        p {
+          font-size: 13px;
+          color: var(--grey);
+        }
+      }
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 30px;
+      width: 50px;
+      color: var(--white);
+      background-color: var(--primary);
+      border-radius: 10px;
+    }
+  }
+
+  &-content {
+    &-title {
+      font-size: 14px;
+      margin: 8px 0;
+    }
+
+    &-description {
+      font-size: 13px;
+      margin: 4px 0;
+    }
+
+    &-redirectLink {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 4px;
+      margin: 8px 0;
+
+      p:first-child {
+        color: var(--cyan-blue);
+      }
+
+      a {
+        max-width: 30vw;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+
+        @media (max-width: 550px) {
+          max-width: 50vw;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0;
+
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+}

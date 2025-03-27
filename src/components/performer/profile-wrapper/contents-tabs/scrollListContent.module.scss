@@ -1,0 +1,121 @@
+.scroll {
+  &-wrapper {}
+
+  &-header {
+    &-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--aqua-blue);
+      margin-bottom: 16px;
+
+      h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: normal;
+      }
+
+      .actions-btn {
+        &-list {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+
+        &-grid {
+          cursor: pointer;
+
+          svg {
+            font-size: 22px;
+          }
+        }
+
+        &-search {
+          gap: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          [class~='ant-input-affix-wrapper'] {
+            opacity: 0;
+            border: none;
+            padding: 0;
+            outline: none;
+            box-shadow: none;
+            background: none;
+            color: var(--white) !important;
+            transition: opacity 0.3s ease-in-out;
+            visibility: hidden;
+            width: 0;
+            transition: all ease-in-out 0.5s;
+
+            &.active {
+              visibility: visible;
+              opacity: 1;
+              bottom: 1px;
+              width: 240px;
+            }
+
+            [class~='ant-input-prefix'] {
+              font-size: 22px;
+            }
+
+            input {
+              height: 30px;
+
+              &::placeholder {
+                color: var(--silver-gray);
+              }
+            }
+          }
+
+          .open-search {
+            color: var(--white);
+
+            [class~='anticon'] {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 7px;
+
+      @media (max-width: 550px) {
+        width: 90vw;
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+          display: none;
+          /* Đối với trình duyệt WebKit như Chrome, Safari */
+        }
+      }
+
+      :global .ant-btn {
+        color: var(--white);
+        background-color: transparent;
+        border: 1px solid var(--royal-blue);
+
+        &.active {
+          color: var(--white);
+          background-color: var(--royal-blue);
+        }
+
+        &:hover {
+          color: var(--white) !important;
+          background-color: var(--royal-blue) !important;
+        }
+      }
+    }
+  }
+
+  &-content {
+    margin: 16px 0;
+  }
+}

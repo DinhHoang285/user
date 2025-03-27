@@ -1,0 +1,162 @@
+.feed-skeleton {
+  margin-bottom: 40px;
+  border-bottom: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (max-width: 550px) {
+    margin-bottom: 28px;
+  }
+
+  .f-top {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+    .p-avt {
+      width: 100px;
+      height: 100px;
+      border-radius: 24px;
+
+      @media screen and (max-width: 550px) {
+        width: 65px;
+        height: 65px;
+        border-radius: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+
+    .f-heading {
+      width: calc(100% - 124px);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      @media screen and (max-width: 550px) {
+        width: 100%;
+      }
+    }
+
+
+    .h-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+
+      .h-t-left {
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+
+        .p-name {
+          height: 25px;
+          width: 118px;
+          border-radius: 12px;
+
+          @media screen and (max-width: 550px) {
+            height: 23px;
+          }
+        }
+
+        .follow-btn {
+          height: 32px;
+          border-radius: 12px;
+          width: 98px;
+        }
+      }
+
+      .h-t-right {
+        display: inline-flex;
+        align-items: center;
+        gap: 24px;
+
+        .feed-time {
+          width: 100px;
+          height: 24px;
+          border-radius: 12px
+        }
+
+        .dropdown-options {
+          border-radius: 4px;
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      @media screen and (max-width: 550px) {
+        padding-left: 85px;
+
+        .h-t-right {
+          position: absolute;
+          top: 80px;
+          right: 0;
+        }
+
+        .follow-btn {
+          z-index: 1;
+          position: absolute;
+          top: 80px;
+          left: 0;
+        }
+
+      }
+    }
+
+    .f-username {
+      .username {
+        width: 100px;
+        height: 18px;
+      }
+
+      @media screen and (max-width: 550px) {
+        padding-left: 85px;
+      }
+    }
+
+    .f-content {
+      height: 37px;
+      border-radius: 12px;
+
+      @media screen and (max-width: 550px) {
+        margin-top: 72px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 100%;
+      gap: 0;
+      position: relative;
+    }
+  }
+
+  .feed-content {
+    height: 540px;
+  }
+
+  .feed-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .action-item {
+      display: inline-flex;
+      gap: 5px;
+
+      .act-btn {
+        height: 32px;
+        width: 65px;
+        border-radius: 12px;
+      }
+    }
+
+    @media screen and (max-width: 550px) {
+      padding-bottom: 28px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.action-ico,
+.action-btn {
+  background-color: transparent;
+  border: unset;
+  outline: none;
+  box-shadow: none;
+  color: var(--white);
+
+
+  &:disabled {
+    background-color: transparent
+  }
+
+  &.inContentView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+
+    svg {
+      font-size: 25px;
+    }
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      font-size: 25px;
+    }
+  }
+
+}

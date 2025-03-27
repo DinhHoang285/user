@@ -1,0 +1,47 @@
+.image-crop {
+  :global {
+    .ant-modal-content {
+      padding: 1px !important;
+    }
+  }
+
+  button {
+    color: #fff;
+  }
+}
+
+.avatar-uploader {
+  :global {
+    .skeleton-loading-icon {
+      animation: skeleton-loading 1s linear infinite alternate;
+      max-width: 100%;
+      border-radius: 5px;
+    }
+
+    .avatar-uploader-icon {
+      font-size: 18px;
+      padding: 8px;
+      background-color: var(--primary-light);
+      color: #fff;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 15px;
+      right: -5px;
+    }
+  }
+}
+
+.custom-img-crop-modal {
+  width: 100%;
+
+  :global {
+    .ant-slider-rail {
+      background-color: #041762;
+    }
+  }
+
+  button {
+    color: #9b9898;
+    font-weight: bold;
+  }
+}

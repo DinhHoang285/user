@@ -1,0 +1,59 @@
+.listing {
+  &-wrapper {
+    margin: 8px 0;
+    margin-bottom: 64px;
+    border-bottom: 1px solid var(--sky-blue);
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &-mark {
+      width: 16px;
+      height: 43px;
+      background-color: #ff9239;
+      border-radius: 8px;
+    }
+
+    &-title {
+      font-size: 19.16px;
+    }
+  }
+
+  &-main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin: 16px 0;
+
+    @media (max-width: 550px) {
+      overflow-y: auto;
+      display: flex;
+      flex-wrap: nowrap;
+
+      &::-webkit-scrollbar {
+        height: 8px;
+        /* Adjust the height of the scrollbar */
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+        /* Make the track transparent */
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.5);
+        /* Semi-transparent thumb */
+        border-radius: 4px;
+        /* Round the corners of the scrollbar thumb */
+      }
+
+      &::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.7);
+        /* Darker thumb on hover */
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.card {
+  &-wrapper {
+    display: block;
+    width: 100%;
+
+    @media (max-width: 550px) {
+      position: relative;
+      flex-grow: 0;
+      flex-shrink: 0;
+      max-width: 166px;
+      height: 320px;
+    }
+  }
+
+  &-thumb {
+    position: relative;
+    display: block;
+    height: 455px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (max-width: 550px) {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &-ad {
+      position: absolute;
+      z-index: 10;
+      bottom: 8px;
+      right: 8px;
+      width: 40px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--white);
+      color: var(--white);
+      background-color: var(--blood-red);
+      border-radius: 5px;
+
+      @media (max-width: 550px) {
+        bottom: 24%;
+        left: 0;
+      }
+    }
+  }
+
+  &-footer {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 8px 0;
+    width: 100%;
+
+    &-avt {
+      display: block;
+      width: 36px;
+      height: 36px;
+      border-radius: 100%;
+      box-sizing: border-box;
+      object-fit: cover;
+    }
+
+    .card-info {
+      &-title {
+        display: block;
+        margin-bottom: 8px;
+        color: var(--white);
+        font-size: 16px;
+        color: var(--white);
+        text-transform: capitalize;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 300px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        font-weight: bold;
+      }
+
+      &-owner {}
+
+      &-stas {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+
+      &-avt {
+        display: none;
+      }
+
+      .card-info {
+        &-title {
+          font-size: 14px;
+          margin: 0 4px;
+          margin-top: 8px;
+        }
+
+        &-owner {
+          margin: 4px 4px;
+        }
+
+        &-stas {
+          margin: 0 4px;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}

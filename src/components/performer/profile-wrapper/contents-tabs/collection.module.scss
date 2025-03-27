@@ -1,0 +1,92 @@
+.container {
+  margin-top: 32px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .view-all {
+      a {
+        color: var(--white);
+      }
+
+      cursor: pointer;
+    }
+  }
+
+  .list-gift {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 34px;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+
+    li {
+      list-style: none;
+      box-sizing: border-box;
+
+      .giftGroup {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .image {
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+          border-radius: 8px;
+
+          @media screen and (max-width: 1069px) {
+            width: 120px;
+            height: 120px;
+          }
+
+          @media screen and (max-width: 970px) {
+            width: 100px;
+            height: 100px;
+          }
+
+          @media screen and (max-width: 866px) {
+            width: 80px;
+            height: 80px;
+          }
+
+          @media screen and (max-width: 768px) {
+            width: 100px;
+            height: 100px;
+          }
+
+          @media (max-width: 550px) {
+            width: 50px;
+            height: 50px;
+          }
+
+        }
+
+
+
+        .totalGift {
+          margin-top: 12px;
+          color: var(--white);
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .no-gift {
+    opacity: .2;
+  }
+
+  hr {
+    border-bottom: 1px solid var(--aqua-blue);
+  }
+}

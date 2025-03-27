@@ -1,0 +1,359 @@
+.container-upload {
+  display: flex;
+  flex-direction: column;
+  gap: 1;
+  width: 100%;
+
+  .box-button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .box-left {
+      width: 60%;
+      display: flex;
+      justify-content: flex-start;
+      gap: 10px;
+      align-items: center;
+
+      .btn {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        border: 1px solid #42B1E8;
+
+        .icon {
+          display: flex;
+          align-items: center;
+        }
+
+        svg {
+          width: 20px;
+          height: 20px;
+          color: #ffff;
+        }
+      }
+
+      .btn-active {
+        background-color: #FF0066;
+        border: 1px solid #FF0066;
+      }
+    }
+
+    .box-right {
+      width: 40%;
+      gap: 8px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .box-sub-only {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .box-x {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      p {
+        color: #FFFFFF;
+        margin-right: 4px;
+        width: fit-content;
+      }
+    }
+
+    @media (max-width: 550px) {
+      flex-direction: column;
+      gap: 12px;
+
+      .box-left {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .box-right {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+  }
+
+  :global .add-more {
+    display: flex;
+    gap: 10px;
+
+    button {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      flex-grow: 0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      border: 1px solid #42B1E8;
+
+      svg {
+        width: 20px;
+        height: 20px;
+        color: #fff;
+      }
+
+      &:hover {
+        background: var(--bg-list-limited-label-checked) !important;
+        color: var(--stroke-form-post-icon-active) !important;
+      }
+    }
+  }
+
+  .button-media {
+    &:hover {
+      background-color: var(--bg-form-post-button-active);
+      color: var(--fill-form-post-icon-active);
+    }
+  }
+
+  :global {
+    .ant-btn-default:not(:disabled):not(.ant-btn-disabled):hover {
+      color: var(--stroke-form-post-icon-active) !important;
+      border-color: none !important;
+      background: var(--bg-list-limited-label-checked) !important;
+    }
+  }
+}
+
+.f-upload-list {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  position: relative;
+  margin-bottom: 10px;
+
+  .f-upload-item {
+    width: 160px !important;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    margin-right: 5px;
+
+    .f-remove {
+      position: absolute;
+      right: 5px;
+      top: 5px
+    }
+
+    .f-upload-thumb {
+      height: 81px;
+      width: 100%;
+      border: 2px solid #42B1E8;
+      overflow: hidden;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 5px;
+
+      :global .ant-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .f-thumb-vid {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        &:hover {
+          background-color: var(--light-grey);
+        }
+
+        :global .anticon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #fff;
+          font-size: 20px;
+          z-index: 5;
+        }
+
+        .thumbnailVideo {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .f-upload-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 0 5px;
+    }
+
+    .f-upload-size {
+      font-size: 8px;
+    }
+
+
+
+    .delfile-img {
+      background-color: #BA2025;
+      width: 23px;
+      height: 23px;
+      border-radius: 5px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      svg {
+        color: #FFFF;
+      }
+    }
+  }
+}
+
+.box-thumbnail-teaser {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 12px;
+
+  :global {
+    .ant-upload-select {
+      border: 1px solid #42B1E8;
+      width: 170px !important;
+      height: 95px !important;
+      margin-top: 12px;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      p {
+        color: #FFFF;
+      }
+
+      i {
+        font-size: 30px;
+      }
+    }
+
+  }
+
+  .box-thumbnail,
+  .box-teaser {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+
+    .box-image {
+      width: 170px;
+      height: 95px;
+      overflow: hidden;
+      border-radius: 5px;
+      border: 1px solid #42B1E8;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .f-remove {
+        position: absolute;
+        right: 5px;
+
+        top: 5px;
+
+        .delfile-img {
+          background-color: #BA2025;
+          width: 23px;
+          height: 23px;
+          border-radius: 5px;
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          svg {
+            color: #FFFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.box-preview {
+  width: 100%;
+
+  :global {
+    .ant-modal-body {}
+
+    .ant-modal-content {
+      max-height: 80dvh;
+      overflow: hidden;
+
+      .ant-modal-body {
+        width: 100%;
+        height: 100%;
+
+        .video-js {
+          width: 100%;
+          height: 100%;
+          padding-top: 500px;
+
+          video {
+            object-fit: contain;
+            padding: 0;
+            max-height: 80dvh;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,193 @@
+.compose-container {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  width: 100%;
+  max-height: 70%;
+  overflow: auto;
+  border-top: 1px solid var(--sky-blue);
+  background-color: #010d3d;
+  z-index: 1;
+
+  .top-btn-groups {
+    margin-bottom: 12px;
+
+    .btn-groups-item {
+      border: none;
+      margin-right: 25px;
+      background-color: transparent;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      &:hover {
+        border-color: transparent !important;
+        background: transparent !important;
+      }
+
+      svg {
+        margin-right: 5px;
+        font-size: 14px;
+      }
+
+      &.preview-btn {
+        color: #3F8CFF;
+
+        .btn-groups-upload {
+          font-size: 13px;
+          color: #3F8CFF;
+        }
+      }
+
+      &.sale-btn {
+        color: #3AC176;
+      }
+
+      &.active {
+        color: var(--primary);
+
+        .ant-upload {
+          color: var(--primary);
+        }
+      }
+
+      .btn-groups-content {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
+  }
+
+  .audio-player {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .compose-chat {
+
+    .bottom-btn-groups {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 12px;
+
+      .grp-left {
+        display: flex;
+        align-items: center;
+
+        .btn-group-items {
+          border: none;
+          height: 43px;
+          line-height: 43px;
+          width: 43px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0;
+          border-radius: 50%;
+          margin-right: 2px;
+          background: #ffffff;
+          border-color: #d9d9d9;
+          color: rgba(0, 0, 0, 0.88);
+          box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+
+
+          &.active {
+            background-color: var(--primary);
+            color: var(--white);
+          }
+
+          svg {
+            font-size: 20px;
+          }
+        }
+
+        .tip-btn {
+          button {
+            margin-bottom: 4px;
+          }
+
+          svg {
+            font-size: 25px;
+            transform: translateY(-10%);
+            color: var(--black) !important;
+          }
+        }
+
+
+        :global {
+          .ant-btn-default {
+            background: #ffffff;
+            border-color: #d9d9d9;
+            color: rgba(0, 0, 0, 0.88);
+            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+          }
+        }
+      }
+
+      .grp-right {
+        .primary-btn {
+          margin-left: 10px !important;
+        }
+
+        @media (max-width: 550px) {
+          .primary-btn {
+            margin-left: 0;
+          }
+
+          .secondary-btn {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .compose-input {
+      max-width: 100%;
+      height: 68px;
+      color: var(--white) !important;
+      background-color: var(--charcoal-blue) !important;
+      font-size: 16px;
+
+      &::placeholder {
+        color: var(--silver-gray);
+      }
+
+      @media screen and (max-width: 550px) {
+        font-size: 16px;
+      }
+
+    }
+
+  }
+
+  @media screen and (max-width: 550px) {
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    box-sizing: border-box;
+  }
+}
+
+
+[data-theme="dark"] .compose-container {
+
+  .compose-input {
+    color: var(--grey);
+
+    &::placeholder {
+      color: var(--black);
+    }
+  }
+
+  .grp-icons {
+    color: #fff;
+  }
+}

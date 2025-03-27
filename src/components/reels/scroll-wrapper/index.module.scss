@@ -1,0 +1,35 @@
+.tiktok-app {
+  // background-color: #000;
+  margin-top: -60px;
+
+  :global {
+    .nav-brand {
+      position: fixed;
+      top: 20px;
+      right: 15px;
+      z-index: 1000;
+
+      button {
+        background-color: transparent;
+        border: none;
+        color: #fff;
+      }
+
+      svg {
+        height: 24px;
+        width: auto;
+      }
+    }
+
+    .scroll-ct {
+      overflow: auto;
+      height: 100dvh;
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

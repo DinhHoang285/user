@@ -1,0 +1,74 @@
+.ant-btn.action-btn {
+  padding: 0 !important;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent !important;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 50%;
+
+  span {
+    margin: 0 !important;
+    color: var(--white);
+  }
+
+  svg {
+    font-size: 25px;
+    color: var(--electric-blue);
+    transform: scale(1.2) translateX(-27%);
+  }
+
+  :global .anticon {
+    color: var(--white);
+    font-size: 20px;
+  }
+
+  &.active,
+  &.hover {
+    color: var(--primary);
+  }
+
+  &.inContentView {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+
+    svg {
+      font-size: 15px;
+      color: #09b3f2 !important;
+    }
+  }
+
+  &.inShort {
+    width: 32px;
+    height: 32px;
+    background-color: transparent !important;
+    border: 1px solid var(--white) !important;
+    transform: scale(1.09) !important;
+    margin-bottom: 2px !important;
+
+    svg {
+      color: var(--electric-blue) !important;
+      transform: translateX(-5%) !important;
+      font-size: 20px !important;
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 1024px) {
+      background-color: transparent;
+      // background-color: var(--white) !important;
+    }
+
+    @media (max-width: 550px) {
+      background-color: transparent;
+      // background-color: var(--white) !important;
+    }
+  }
+}

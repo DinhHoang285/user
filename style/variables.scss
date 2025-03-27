@@ -1,0 +1,68 @@
+:root {
+  --primary-light: #ff0066;
+  --primary: #d36cd3;
+  --secondary: #0558a5;
+  --orange: #ffa75c;
+  --colorLight: #ccf1ff;
+  --blue: #1ea2f1;
+  --royal-blue: #0554a5;
+  --cyan-blue: #29abe2;
+  --electric-blue: #3cafe7;
+  --brilliant-blue: #4096ff;
+  --neon-blue: #09b3f2;
+  --ocean-blue: #0558a5;
+  --charcoal-blue: #09162e;
+  --navi-blue: #1c264a;
+  --green: #4ec52a;
+  --red: #f04134;
+  --blood-red: #a50000;
+  --white: #FFFFFF;
+  --black: #333;
+  --navi-black: #0a0d18;
+  --light-black: #020a29;
+  --dark-grey: #666;
+  --grey: #a1a1a1;
+  --light-grey: #ddd;
+  --gray: #ccc;
+  --silver-gray: #dadada;
+  --light-blue: #eeeeee;
+  --aqua-blue: #6ecddf;
+  --sky-blue: #42b1e8;
+  --soft-pink: #ffeeff;
+  --pink: #e776e3;
+  --violet: #7F4EFF73;
+}
+
+[data-theme='dark'] {
+  --orange: #ac7346;
+  --blue: #17527d;
+  --green: #2d6223;
+  --colorLight: #667683;
+  --white: #101010;
+  --black: #e2e2e2;
+  --light-grey: #3e3e3e;
+  --light-blue: #202020;
+  --dark-grey: #c6c6c6;
+  --gray: #484848;
+  --primary: #d36cd3;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(0, 0%, 96.9%);
+  }
+
+  100% {
+    background-color: hsl(0, 0%, 80%);
+  }
+}
+
+@keyframes scaling {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.8);
+  }
+}

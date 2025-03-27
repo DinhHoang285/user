@@ -1,0 +1,115 @@
+.follow {
+  &-wrapper {
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  &-list {
+    width: 100%;
+    // max-width: calc(1080px - 120px);
+
+    @media (max-width: 550px) {
+      padding: 0;
+      width: 100%;
+    }
+
+    :global {
+      .slick-list {
+        margin: 0 5%;
+        width: 90%;
+
+        .slick-slide {
+          width: 80px;
+        }
+      }
+
+      .slick-arrow:first-child {
+        width: 15px;
+        height: 15px;
+      }
+
+      .slick-arrow:last-child {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  &-showAll {
+    height: 100%;
+    width: 120px;
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+
+    &:hover {
+      background: transparent !important;
+      color: var(--primary) !important;
+    }
+
+    @media (max-width: 550px) {
+      width: 58px;
+      font-size: 14px;
+    }
+  }
+}
+
+.showAll {
+  height: 100%;
+  width: fit-content;
+  background-color: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 18px;
+
+  &:hover {
+    background: transparent !important;
+    color: var(--primary) !important;
+  }
+
+  @media (max-width: 550px) {
+    width: 58px;
+    font-size: 14px;
+  }
+}
+
+.box-carousel {
+  position: relative;
+
+  :global {
+    .mySwiper {
+      width: 100%;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      width: fit-content;
+      height: fit-content;
+      color: #fff;
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      z-index: 10;
+      display: block;
+    }
+
+    .swiper-button-prev {
+      left: 10px;
+    }
+
+    .swiper-button-next {
+      right: 10px;
+    }
+  }
+
+  .box-swiper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px;
+    box-sizing: border-box;
+  }
+}
