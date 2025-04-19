@@ -1,4 +1,9 @@
 /* eslint-disable react/button-has-type */
+
+// Push code lên Github
+// git add .
+// git commit -m "Tên bạn muốn cập nhật cho mọi người biết"
+// git push origin main  // Đẩy lên git
 import React from 'react';
 import style from './style.module.scss';
 
