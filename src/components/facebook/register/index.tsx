@@ -1,7 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleQuestion } from '@fortawesome/free-solid-svg-icons';
+import { AiFillQuestionCircle } from 'react-icons/ai';
 import style from './style.module.scss';
 
 export default function RegisterContainer() {
@@ -22,9 +21,11 @@ export default function RegisterContainer() {
               <input type="text" placeholder="Họ" />
               <input type="text" placeholder="Tên" />
             </div>
-            <div>
-              <label>Ngày sinh</label>
-              <FontAwesomeIcon icon={faCircleQuestion} className={style.iconQuestion} />
+            <div className={style.title}>
+              <p>Ngày sinh</p>
+              <i>
+                <AiFillQuestionCircle />
+              </i>
             </div>
             <div className={style.selectRowDayBorn}>
               <select defaultValue="">
@@ -41,7 +42,7 @@ export default function RegisterContainer() {
                   'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8',
                   'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'
                 ].map((month, i) => (
-                  <option key={i} value={month}>{month}</option>
+                  <option key={i as number} value={month}>{month}</option>
                 ))}
               </select>
 
@@ -53,23 +54,25 @@ export default function RegisterContainer() {
               </select>
             </div>
 
-            <div>
-              <label>Giới tính</label>
-              <FontAwesomeIcon icon={faCircleQuestion} className={style.iconQuestion} />
+            <div className={style.title}>
+              <p>Giới tính</p>
+              <i>
+                <AiFillQuestionCircle />
+              </i>
             </div>
             <div className={style.radioRowSex}>
-              <label>
+              <span>
                 <input type="radio" name="gender" />
                 Nam
-              </label>
-              <label>
+              </span>
+              <span>
                 <input type="radio" name="gender" />
                 Nữ
-              </label>
-              <label>
+              </span>
+              <span>
                 <input type="radio" name="gender" />
                 Tuỳ chỉnh
-              </label>
+              </span>
             </div>
             <div className={style.inputInfo}>
               <input type="text" placeholder="Số di động hoặc email" />

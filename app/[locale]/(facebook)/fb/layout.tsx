@@ -1,25 +1,24 @@
-import Footer from '@layouts/footer';
-import Header from '@layouts/header';
-import dynamic from 'next/dynamic';
+import FooterFb from '@layouts/facebook/footer';
+import HeaderFb from '@layouts/facebook/header';
 import { ReactNode } from 'react';
 import withHydrationOnDemand from 'react-hydration-on-demand';
 import { Socket } from 'src/socket';
 
-const HeaderFaceBook = withHydrationOnDemand({ on: ['idle', 'visible'] })(
-  Header
+const HeaderHydration = withHydrationOnDemand({ on: ['idle', 'visible'] })(
+  HeaderFb
 );
-const FooterFaceBook = withHydrationOnDemand({ on: ['idle', 'visible'] })(
-  Footer
+const FooterHydration = withHydrationOnDemand({ on: ['idle', 'visible'] })(
+  FooterFb
 );
 
 export default function MainLayoutTheme({ children }: { children: ReactNode; }) {
   return (
     <Socket>
-      <HeaderFaceBook />
+      <HeaderHydration />
       <div className="body-content">
         {children}
       </div>
-      <FooterFaceBook />
+      <FooterHydration />
     </Socket>
   );
 }

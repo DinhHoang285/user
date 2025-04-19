@@ -9,7 +9,6 @@ import style from './style.module.scss';
 
 export default function LoginContainer() {
   return (
-
     <div className={style.loginContainer}>
       <div className={style.main}>
         <div className={style.left}>
@@ -29,7 +28,6 @@ export default function LoginContainer() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }

@@ -18,13 +18,31 @@
 .formContainerContext {
   color: #000;
 
-  label {
+  span {
     color: #606770;
   }
 
   input,
   select {
     color: #000; // input + select chữ đen
+  }
+
+  .title {
+    display: flex;
+    align-items: center;
+
+    p {
+      margin: 0;
+    }
+
+    i {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-bottom: 2px;
+      }
+    }
   }
 }
 
@@ -103,7 +121,7 @@
   margin-bottom: 14px;
 }
 
-.radioRowSex label {
+.radioRowSex span {
   flex: 1;
   border: 1px solid #ccd0d5;
   padding: 8px 10px;

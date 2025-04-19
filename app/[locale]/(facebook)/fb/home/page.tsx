@@ -1,5 +1,9 @@
+import HomeContainer from '@components/facebook/home';
+
 function PageHome() {
-  return (<p>This is page Home</p>);
+  return (
+    <HomeContainer />
+  );
 }
 
 export default PageHome;

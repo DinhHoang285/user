@@ -1,9 +1,11 @@
+/* eslint-disable jsx-a11y/img-redundant-alt */
+/* eslint-disable react/button-has-type */
 import React from 'react';
-import style from './style.home.scss';
+import style from './style.module.scss';
 
-export default function FacebookInterface() {
+export default function HomeContainer() {
   return (
-    <div className="flex flex-col h-screen bg-gray-100 font-sans">
+    <div className={`${style.homeContainer} flex flex-col h-screen bg-gray-100 font-sans`}>
       {/* Header/Navigation Bar */}
       <div className="flex items-center justify-between bg-white shadow-sm px-4 py-2 sticky top-0 z-50">
         {/* Left section - Logo and Search */}
@@ -72,7 +74,11 @@ export default function FacebookInterface() {
             </svg>
           </div>
           <div className="w-10 h-10 rounded-full overflow-hidden">
-            <img src="/api/placeholder/40/40" alt="User profile" className="w-full h-full object-cover" />
+            <img
+              src="https://scontent.fsgn5-14.fna.fbcdn.net/v/t39.30808-6/492006217_1249178473884999_8913291558767891792_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGX-v6vriacJUMaVd6cZ-lb5-zM0t9pDH_n7MzS32kMf8GB_QvdgrqZWgJrmzgqfhfWRGoIEg9bKlW-b-BFhypf&_nc_ohc=_NYNiEv1Dm4Q7kNvwFqdYK2&_nc_oc=AdkHCjCsI4RoHixXBaCMxsKk9RsDtqFXveYZAux15NamBk09gCZdFVdoO60lVE6PSJmzGLbvFD3cUNejuyxeUFKd&_nc_zt=23&_nc_ht=scontent.fsgn5-14.fna&_nc_gid=sRhVWfsI0LqSShKtpoUCsw&oh=00_AfFV6bujB7bncRKTxro-_bMBYzkDdC7HZ8aFAyR-yw2FaA&oe=6809B467"
+              alt="User profile"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
@@ -313,7 +319,9 @@ export default function FacebookInterface() {
         <div className="w-1/4 p-4 hidden lg:block">
           {/* Bạn có thể thêm nội dung Sidebar bên phải ở đây nếu cần */}
         </div>
-      </div> {/* Đóng div.flex.flex-1 */}
-    </div>     {/* Đóng div.flex.flex-col */ }
+      </div>
+      {' '}
+      {/* Đóng div.flex.flex-1 */}
+    </div>
   );
 }

@@ -60,12 +60,12 @@ function ExplorePage() {
         <FilterExplore onFilter={handleFilter} />
         <div className={style['explore-content']}>
           <div className={style['explore-content-list']}>
-            {listExplore.length > 0
+            {listExplore?.length > 0
               && listExplore.map((item) => (
                 <CardTreding item={item} key={item._id} />
               ))}
           </div>
-          {!searching && !listExplore.length && (
+          {!searching && !listExplore?.length && (
             <p style={{ textAlign: 'center' }}>{intl.formatMessage({ id: 'noExploreWasFound', defaultMessage: 'No explore was found' })}</p>
           )}
           {searching && (
